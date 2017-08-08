@@ -1,0 +1,58 @@
+.hamburger{
+    z-index: 1001;
+    background: none;
+    border: none;
+    outline: none;
+    width: rem(41);
+    height: rem(41);
+    @include bp($m){
+        width: rem(60);
+        height: rem(60);
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+    .hamburger__svg{
+        width: 100%;
+    }
+
+    .hamburger__line{
+        stroke: black;
+        stroke-width: 6; 
+        transform-origin: 50% 50%;
+        transition: transform 0.5s;
+    }
+
+    .hamburger__line--1{
+        transform: translateY(-20px) rotate(0deg);
+    }
+
+    .hamburger__line--2{
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+
+    .hamburger__line--3{
+        transform: translateY(20px) rotate(0deg);
+    }
+
+.hamburger--open{
+    .hamburger__line--1{
+        transform: rotate(45deg);
+        transition: transform 0.5s;
+    }
+
+     .hamburger__line--2{
+        opacity: 0;
+        transition: opacity .125s;
+    }
+
+    .hamburger__line--3{
+        transform: rotate(-45deg);
+        transition: transform 0.5s;
+    }
+}
+

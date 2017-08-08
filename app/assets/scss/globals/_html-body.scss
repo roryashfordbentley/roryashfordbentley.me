@@ -1,0 +1,19 @@
+////
+/// html / body
+/// 
+/// @author Rory Ashford
+////
+
+
+html { 
+    font-size: $font_size;
+    line-height: $line-height;
+    height: 100%;
+}
+
+    body {
+        font-family: $body_font;
+        -webkit-font-smoothing: antialiased;
+        height: 100%;
+        color: $text;
+    }

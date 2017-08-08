@@ -1,0 +1,22 @@
+.home-intro{
+    background-image: url('assets/img/stripes.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.home-intro__text{
+    font-size: rem(30);
+    font-weight: 500;
+    padding: rem(60) 0;
+    
+    @include bp($m){
+        font-size: rem(40);
+        padding: rem(96) 0;
+    }
+
+    @include bp($l){
+        font-size: rem(50);
+        padding: rem(128) 0;
+    }
+}

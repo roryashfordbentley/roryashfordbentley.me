@@ -1,0 +1,39 @@
+.featured-project{
+    margin-bottom: rem(48);
+}
+
+.featured-project__img{
+    width: 100%;
+    margin-bottom: rem(24);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.featured-project__cat{
+    display: block;
+    font-size: rem(16);
+    color: $clr_text_light;
+    
+    @include bp($m){
+        font-size: rem(12);
+    }
+
+    @include bp($l){
+        font-size: rem(20);
+    }
+}
+
+.featured-project__title{
+    font-size: rem(36);
+
+    @include bp($m){
+        font-size: rem(24);
+    }
+
+    @include bp($l){
+        font-size: rem(36);
+    }
+
+    @include bp($xl){
+        font-size: rem(42);
+    }
+}

@@ -1,0 +1,57 @@
+////
+// Typography
+////
+
+// shared type styles for common elements
+p,
+ul,
+ol,
+input, 
+textarea{
+    font-weight: 400;
+    margin-bottom: rem(24);
+
+    &:last-child{
+        margin-bottom:0;
+    }
+}
+
+// Links
+a {
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover{
+    color: #000;
+}
+
+// Paragraph link
+p a,
+p a:visited{
+    text-decoration: underline;
+}
+
+// Headings
+h1,h2,h3,h4,h5,h6{
+    font-family: $heading_font;
+    font-weight: 500;
+}
+
+h1{ 
+    font-size: rem(60);
+}
+
+h2{ 
+    font-size: rem(50);
+}
+
+h3{ 
+    font-size: rem(40);
+}
+
+// Lists
+ul,ol {    
+    margin-left: rem(12);
+}

@@ -1,0 +1,16 @@
+.site-header{
+    display: flex;
+    justify-content: space-between;
+    padding: rem(24);
+    @include bp($m){
+        padding: rem(48);
+    }
+}
+
+.logo{
+    font-size: rem(24);
+    z-index: 1001;
+    @include bp($m){
+        font-size: rem(42);
+    }
+}

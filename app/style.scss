@@ -1,0 +1,27 @@
+@import "assets/scss/__base.scss";
+@import "assets/scss/__colours.scss";
+
+@import "assets/scss/tools/_breakpoints.scss";
+@import "assets/scss/tools/_gridtacular.scss";
+@import "assets/scss/tools/_rem.scss";
+
+// Global rules
+@import "assets/scss/globals/_reset.scss";
+@import "assets/scss/globals/_html-body.scss";
+
+@import "assets/scss/globals/_buttons.scss";
+@import "assets/scss/globals/_grid-setup.scss";
+@import "assets/scss/globals/_imgs.scss";
+@import "assets/scss/globals/_typography.scss";
+@import "assets/scss/globals/_wrappers.scss";
+
+//tools
+//@import "assets/scss/tools/_aspect-ratio.scss";
+
+// Components
+@import "components/header/_index.scss";
+@import "components/hamburger/_index.scss";
+@import "components/nav/_index.scss";
+@import "components/home-intro/_index.scss";
+@import "components/featured-projects/_index.scss";
+@import "components/featured-project/_index.scss";

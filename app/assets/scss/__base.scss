@@ -1,0 +1,51 @@
+////
+// Base
+// Variables and setup
+// 
+////
+
+////
+// Media Queries
+////
+
+$s: null null;
+
+$m: 800px null;
+$l: 1100px null;
+$xl: 1400px null;
+
+
+/*$mq_small_min:          null;
+$mq_small_max:          null;
+$s: $mq_small_min $mq_small_max;
+
+$mq_medium_min:         800px;
+$mq_medium_max:         null;
+$m: $mq_medium_min $mq_medium_max;
+
+$mq_large_min:          1000px;
+$mq_large_max:          null;
+$l: $mq_large_min $mq_large_max;
+
+$mq_extralarge_min:     1200px;
+$mq_extralarge_max:     null;
+$xl: $mq_extralarge_min $mq_extralarge_max;*/
+
+$font_size:             62.5%;
+$line-height:           1.5;
+
+////
+// Font Weights
+////
+
+$light:                 300;
+$medium:                400;
+$semibold:              600;
+$bold:                  700;
+
+////
+// Font families
+////
+
+$heading_font:          "Work Sans", Helvetica, Arial, sans-serif;
+$body_font:             $heading_font;
