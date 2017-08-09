@@ -1,3 +1,4 @@
 node_modules
 wordpress/*
 !wordpress/readme.md
+!wordpress/wp-content/plugins/rory-ashford-cpts
