@@ -6,7 +6,7 @@
     "browserify": "browserify app/scripts.js -t [ babelify --presets [ react ] ] -o app/scripts.min.js",
     "watch:sass": "fsmonitor -d app/ -q '+*.scss' '!app/style.scss' npm run -s sass",
     "watch:js": "fsmonitor -d app/ -q '+*.js' '!scripts.min.js' npm run browserify",
-    "browsersync": "browser-sync start --files 'app/*, !app/**/*.scss, !app/scripts.js, !.git/*, app/**/*' --no-open --proxy localhost/typefast",
+    "browsersync": "browser-sync start --files 'app/*, !app/**/*.scss, !app/scripts.js, !.git/*, app/**/*' --no-open --proxy localhost/portfolio",
     "watch": "npm run -s watch:sass & npm run -s watch:js & npm run browsersync"
   },
   "dependencies": {
