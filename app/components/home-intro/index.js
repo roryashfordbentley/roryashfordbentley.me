@@ -9,33 +9,28 @@ class HomeIntro extends React.Component {
         super(props);
         this.url = 'http://localhost/portfolio/wordpress/wp-json/wp/v2/pages/5'
         this.state = {
-            results: ''
+            text: ''
         }
     }
 
-    getApiData(){
-        fetch(this.url)
+    getApiData(url){
+        fetch(url)
         .then((response) => response.json())
-        .then((data) => this.setState({ results: data.content.rendered }))
+        .then((data) => this.setState({ text: data.content.rendered }))
         .catch(function(err) {
             console.log(err);
         });
     }
 
-    componentDidMount() {
-        this.getApiData();
-        console.log(this.state);
-    }
-
-    componentDidUpdate() {
-        console.log(this.state); // works!!
+    componentWillMount() {
+        this.getApiData(this.url);
     }
 
     render() {
         return (
             <div className="home-intro">
                 <div className="wrapper">
-                    <div className="home-intro__text" dangerouslySetInnerHTML={{__html: this.state.results}}></div>
+                    <div className="home-intro__text" dangerouslySetInnerHTML={{__html: this.state.text}}></div>
                 </div>
             </div>
         );
