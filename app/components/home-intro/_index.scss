@@ -3,20 +3,26 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    margin: rem(60) 0;
+    padding: rem(60) 0;
+    @include bp($m){
+        padding: rem(96) 0;
+    }
+    @include bp($l){
+        //background-size: contain;
+        padding: rem(128) 0;
+    }
 }
 
-.home-intro__text{
+.home-intro__text p{
     font-size: rem(30);
     font-weight: 500;
-    padding: rem(60) 0;
     
     @include bp($m){
         font-size: rem(40);
-        padding: rem(96) 0;
     }
 
     @include bp($l){
         font-size: rem(50);
-        padding: rem(128) 0;
     }
 }

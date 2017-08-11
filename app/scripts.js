@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import FetchData from './lib/fetch.js';
 
 const app = document.querySelector("#app");
 
@@ -14,6 +15,7 @@ import HomeIntro from './components/home-intro';
 import FeaturedProjects from './components/featured-projects';
 
 class App extends React.Component{
+    
     render(){
         return (
             <div className="container">
