@@ -2,7 +2,6 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FetchData from '../../lib/fetch.js';
 
 class HomeIntro extends React.Component {
 
