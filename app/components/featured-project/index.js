@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 class FeaturedProject extends React.Component {
 
     componentDidMount() {
-        console.log(this.props);
+        //console.log(this.props);
     }
 
     aspectRatioImg(){

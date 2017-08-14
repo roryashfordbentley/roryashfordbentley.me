@@ -15,11 +15,21 @@ class FeaturedProjects extends React.Component {
         }
     }
 
+    /**
+     * Get List Of Featured Projects
+     *
+     * The data is pulled from ACF which is set in WP Admin
+     * in the Home page. 
+     */
     getListOfProjects(url) {
         fetch(url)
         .then((response) => response.json())
         .then((data) => {
             let projectsData = data.acf.featured_projects;
+            console.log(projectsData); // order is correct here
+            /**
+             * Fetch the actual posts
+             */
             this.projects = [];
             
             for(let i = 0; i < projectsData.length; i++){
@@ -40,13 +50,13 @@ class FeaturedProjects extends React.Component {
             console.log(err);
         });
     }
-
+    
     componentWillMount() {
         this.getListOfProjects(this.postListUrl);
     }
 
     componentDidUpdate() {
-        console.log(this.state.featuredProjects);
+        //console.log(this.state.featuredProjects);
     }
 
     render() {
@@ -60,6 +70,10 @@ class FeaturedProjects extends React.Component {
                                 let title = project.title.rendered;
                                 let imgAspectRatio = project.aspect_ratio;
                                 let img = project.acf.cover_image_landscape;
+
+                                if(imgAspectRatio === 'portrait'){
+                                    img = project.acf.cover_image_portrait;
+                                }
                                 
                                 return <FeaturedProject key={index} category={cat} title={title} aspect={imgAspectRatio} img={img} />
                             })
