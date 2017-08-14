@@ -33,7 +33,7 @@ class Header extends React.Component {
             <header className="site-header">
                 <h1 className="logo">Rory Ashford</h1>
                 <Hamburger onClick={this.toggleMenu} toggle={this.state.menuToggle} />
-                <Nav toggle={this.state.menuToggle} />
+                <Nav onClick={this.toggleMenu} toggle={this.state.menuToggle} />
             </header>
         );
     }
