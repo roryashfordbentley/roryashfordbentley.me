@@ -3,14 +3,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ProjectsGrid from '../projects-grid';
+import {
+    BrowserRouter,
+    Route,
+    Link
+} from 'react-router-dom';
+import ProjectsDisplay from '../projects-display';
+import ProjectSingle from '../project-single';
+
 
 class Projects extends React.Component {
     render() {
         return (
             <div>
-                <ProjectsGrid term="work" title="Work" />
-                <ProjectsGrid term="open-source" title="Open Source" />
-                <ProjectsGrid term="experiments" title="Experiments" />
+                <Route exact path={'/projects'} component={ProjectsDisplay}/>
+                <Route path={'/projects/:ProjectSlug'} component={ProjectSingle}/>
             </div>
         );
     }

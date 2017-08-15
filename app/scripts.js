@@ -20,15 +20,15 @@ import Projects from './components/projects';
 import About from './components/about';
 import Contact from './components/contact';
 import FeaturedProjects from './components/featured-projects';
+import ProjectSingle from './components/project-single';
 
 class App extends React.Component{
-    
     render(){
         return (
             <div className="container">
                 <Header />
                 <Route exact path="/" component={Home} />
-                <Route exact path="/projects" component={Projects} />
+                <Route path="/projects" component={Projects} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/contact" component={Contact} />
             </div>
