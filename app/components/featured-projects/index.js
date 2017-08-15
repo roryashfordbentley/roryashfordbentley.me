@@ -19,7 +19,6 @@ class FeaturedProjects extends React.Component {
         .then((response) => response.json())
         .then((data) => {
             let projectsData = data.acf.featured_projects;
-            
             this.setState({ 
                 featuredProjects: projectsData
             });

@@ -2,12 +2,16 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ProjectsGrid from '../projects-grid';
 
 class Projects extends React.Component {
-
     render() {
         return (
-            <div>Projects</div>
+            <div>
+                <ProjectsGrid term="work" title="Work" />
+                <ProjectsGrid term="open-source" title="Open Source" />
+                <ProjectsGrid term="experiments" title="Experiments" />
+            </div>
         );
     }
 }
