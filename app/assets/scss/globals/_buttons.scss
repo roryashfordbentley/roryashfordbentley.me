@@ -7,11 +7,19 @@
     width: auto;
     margin: 0;
     cursor: pointer;
-    border: none;
+    border: rem(4) solid;
+    color: $text;
+    font-size: rem(20);
+    font-weight: 500;
+    padding: rem(8) rem(16);
     outline: none;
     -webkit-font-smoothing: antialiased;
 
     &:focus{
         box-shadow: none;
+    }
+
+    &:hover{
+        color: black;
     }
 }

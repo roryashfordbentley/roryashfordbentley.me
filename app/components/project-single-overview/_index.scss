@@ -1,0 +1,67 @@
+.project-single{}
+
+.project-overview{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: rem(200);
+}
+
+.project-overview__text{
+    position: absolute;
+    bottom: rem(60);
+    left: 0;
+}
+
+.project-overview__taxonomy{
+    display: block;
+    margin-bottom: rem(24);
+    font-size: rem(16);
+    @include bp($m){ font-size: rem(18); }
+    @include bp($l){ font-size: rem(24); }
+}
+
+.project-overview__taxonomy--bold{
+    font-weight: 500;
+}
+
+.project-overview__title{
+    position: relative;
+    padding-bottom: rem(24);
+    font-weight: 400;
+    font-size: rem(30);
+    @include bp($m){ font-size: rem(40); }
+    @include bp($l){ font-size: rem(60); }
+}
+
+.project-overview__title__heading{
+    position: relative;
+    padding-top: rem(24);
+    z-index: 1000;
+}
+
+.project-overview__stripes{
+    position: absolute;
+}
+
+.project-overview__stripes__stripe{
+    fill: $brand;
+}
+
+.project-overview__cover{
+    //width: 75%;
+}
+
+.project-overview__cover-img{
+    display: block;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    margin-bottom: rem(48);
+}
+
+.project-overview__btn{
+    display: block;
+    margin-left: auto;
+    width: rem(180);
+    text-align: center;
+}
+

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ProjectsGrid from '../projects-grid';
+import ProjectOverview from '../project-single-overview';
 
 class Projects extends React.Component {
     
@@ -48,33 +48,26 @@ class Projects extends React.Component {
         this.getProjectData(this.baseProjectsUrl,this.slug);
     }
 
-    componentDidUpdate() {
-        //console.log(this.state.data);
-    }
-
     render() {
         return (
-            <div className="wrapper">
-                <section className="project-single">
-                    <span className="project-single__taxonomy">{'Project/ ' + this.state.taxonomy}</span>
-                    <h1 className="project-single__title">{this.state.title}</h1>
-                    <img className="project-single__img" src={this.state.coverImg} />
-                    <a className="btn" href={this.state.url}>View Project</a>
+            <section className="project-single">
 
-                    <div className="project-single__description" dangerouslySetInnerHTML={{__html: this.state.content}}></div>
+                <ProjectOverview taxonomy={this.state.taxonomy} title={this.state.title} img={this.state.coverImg} link={this.state.url} />
 
-                    <div className="g">
-                        <div className="gi--1-1  gi--2-3--m">
-                            <img className="project-single__img" src={this.state.detailImg1} />
-                        </div>
-                        <div className="gi--1-1  gi--1-3--m">
-                            <img className="project-single__img" src={this.state.detailImg2} />
-                        </div>
+                <div className="project-single__description" dangerouslySetInnerHTML={{__html: this.state.content}}></div>
+
+                <div className="g">
+                    <div className="gi--1-1  gi--2-3--m">
+                        <img className="project-single__detail-img  project-single__detail-img--1" src={this.state.detailImg1} />
                     </div>
-                    <h2>Technical Overview</h2>
-                    <div className="project-single__technical-overview" dangerouslySetInnerHTML={{__html: this.state.technicalOverview}}></div>
-                </section>
-            </div>
+                    <div className="gi--1-1  gi--1-3--m">
+                        <img className="project-single__detail-img  project-single__detail-img--2" src={this.state.detailImg2} />
+                    </div>
+                </div>
+                <h2>Technical Overview</h2>
+                <div className="project-single__technical-overview" dangerouslySetInnerHTML={{__html: this.state.technicalOverview}}></div>
+            </section>
+
         );
     }
 }
