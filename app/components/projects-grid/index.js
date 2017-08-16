@@ -30,8 +30,21 @@ class ProjectsGrid extends React.Component {
         this.getListOfProjects(this.baseProjectsUrl,this.props.term);
     }
 
-    componentDidUpdate() {
-        console.log(this.state.data);
+    outputItems(){
+        let items = this.state.data.map((project,index) => {
+            let title = project.title.rendered;
+            let slug = project.slug;
+            let image = '';
+            
+            if(project.acf.cover_image_landscape){
+                image = project.acf.cover_image_landscape.sizes.landscape_large;
+                console.log(image);
+            }
+            
+            return <ProjectsGridItem key={index} title={title} slug={slug} img={image} />
+        });
+
+        return items;
     }
 
     render() {
@@ -41,14 +54,7 @@ class ProjectsGrid extends React.Component {
                     <h1 className="projects-grid__title">{this.props.title}</h1>
 
                     <div className="g">
-                        {
-                            this.state.data.map((project,index) => {
-                                let title = project.title.rendered;
-                                let slug = project.slug;
-                                let image = project.acf.cover_image_landscape.sizes.landscape_large;
-                                return <ProjectsGridItem key={index} title={title} slug={slug} img={image} />
-                            })
-                        }
+                        { this.outputItems() }
                     </div>
                 </div>
             </div>
