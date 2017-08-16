@@ -6,6 +6,7 @@ import ProjectOverview from '../project-single-overview';
 import DetailImages from '../project-single-detail-images';
 import TechnicalOverview from '../project-single-technical-overview';
 import ProjectDescription from '../project-single-description';
+import Codepen from '../codepen';
 
 class Projects extends React.Component {
     
@@ -21,7 +22,8 @@ class Projects extends React.Component {
             technicalOverview: '',
             coverImg: '',
             detailImg1: '',
-            detailImg2: ''
+            detailImg2: '',
+            codepen: ''
         }
     }
 
@@ -30,7 +32,7 @@ class Projects extends React.Component {
         .then((response) => response.json())
         .then((data) => {
 
-            console.log(data[0]);
+            console.log(data[0].acf.codepen_embed);
 
             this.setState({ 
                 title: data[0].title.rendered,
@@ -40,7 +42,8 @@ class Projects extends React.Component {
                 technicalOverview: data[0].acf.technical_overview,
                 coverImg: data[0].acf.cover_image_landscape.sizes.landscape_large,
                 detailImg1: data[0].acf.detail_image_1.sizes.landscape_large,
-                detailImg2: data[0].acf.detail_image_2.sizes.portrait_large
+                detailImg2: data[0].acf.detail_image_2.sizes.portrait_large,
+                codepen: data[0].acf.codepen_embed
             });
         }).catch(function(err) {
             console.log(err);
@@ -56,6 +59,7 @@ class Projects extends React.Component {
             <section className="project-single">
                 <ProjectOverview taxonomy={this.state.taxonomy} title={this.state.title} img={this.state.coverImg} link={this.state.url} />
                 <ProjectDescription text={this.state.content} />
+                <Codepen code={this.state.codepen} />
                 <DetailImages img1={this.state.detailImg1} img2={this.state.detailImg2} />
                 <TechnicalOverview text={this.state.technicalOverview} />
             </section>
