@@ -10,7 +10,7 @@ class ProjectsDisplay extends React.Component {
             <div>
                 <ProjectsGrid term="work" title="Work" />
                 <ProjectsGrid term="open-source" title="Open Source" />
-                <ProjectsGrid term="experiments" title="Experiments" />
+                <ProjectsGrid term="experiment" title="Experiments" />
             </div>
         );
     }
