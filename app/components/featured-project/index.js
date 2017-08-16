@@ -29,14 +29,21 @@ class FeaturedProject extends React.Component {
                 url: 'http://localhost/portfolio/tbc',
                 img: this.aspectRatioImg(data)
             });
+        }).catch(function(err) {
+            console.log(err);
         });
     }
 
     aspectRatioImg(data){
-        let img = data.acf.cover_image_landscape.sizes.landscape_large;
-        if(this.props.aspect === 'portrait') {
-            img = data.acf.cover_image_portrait.sizes.portrait_large;
+        let img = '';
+
+        if(data.acf.cover_image_landscape){
+            img = data.acf.cover_image_landscape.sizes.landscape_large;
+            if(this.props.aspect === 'portrait') {
+                img = data.acf.cover_image_portrait.sizes.portrait_large;
+            }
         }
+        
 
         return img;
     }
