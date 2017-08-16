@@ -2,6 +2,45 @@
 // Typography
 ////
 
+////
+// Font size mixins
+////
+
+@mixin fs1(){ 
+    font-size: rem(12);
+    @include bp($m){ font-size: rem(14); }
+    @include bp($l){ font-size: rem(16); }
+    @include bp($xl){ font-size: rem(18); }
+}
+
+@mixin fs2(){ 
+    font-size: rem(16);
+    @include bp($m){ font-size: rem(18); }
+    @include bp($l){ font-size: rem(24); }
+    @include bp($xl){ font-size: rem(28); }
+}
+
+@mixin fs3(){ 
+    font-size: rem(20);
+    @include bp($m){ font-size: rem(24); }
+    @include bp($l){ font-size: rem(28); }
+    @include bp($xl){ font-size: rem(32); }
+}
+
+@mixin fs4(){ 
+    font-size: rem(24);
+    @include bp($m){ font-size: rem(30); }
+    @include bp($l){ font-size: rem(36); }
+    @include bp($xl){ font-size: rem(40); }
+}
+
+@mixin fs5(){ 
+    font-size: rem(32);
+    @include bp($m){ font-size: rem(38); }
+    @include bp($l){ font-size: rem(42); }
+    @include bp($xl){ font-size: rem(48); }
+}
+
 // shared type styles for common elements
 p,
 ul,
@@ -18,19 +57,13 @@ textarea{
 
 // Links
 a {
-    color: #000;
+    color: $brand_dark;
     text-decoration: none;
     display: inline-block;
 }
 
 a:hover{
     color: #000;
-}
-
-// Paragraph link
-p a,
-p a:visited{
-    text-decoration: underline;
 }
 
 // Headings
