@@ -53,19 +53,23 @@ class Projects extends React.Component {
             <section className="project-single">
 
                 <ProjectOverview taxonomy={this.state.taxonomy} title={this.state.title} img={this.state.coverImg} link={this.state.url} />
-
-                <div className="project-single__description" dangerouslySetInnerHTML={{__html: this.state.content}}></div>
-
-                <div className="g">
-                    <div className="gi--1-1  gi--2-3--m">
-                        <img className="project-single__detail-img  project-single__detail-img--1" src={this.state.detailImg1} />
+                <div className="wrapper">
+                    <div className="project-single__description" dangerouslySetInnerHTML={{__html: this.state.content}}></div>
+                    <div className="g">
+                        <div className="gi--1-1  gi--2-3--m">
+                            <img className="project-single__detail-img  project-single__detail-img--1" src={this.state.detailImg1} />
+                        </div>
+                        <div className="gi--1-1  gi--1-3--m">
+                            <img className="project-single__detail-img  project-single__detail-img--2" src={this.state.detailImg2} />
+                        </div>
                     </div>
-                    <div className="gi--1-1  gi--1-3--m">
-                        <img className="project-single__detail-img  project-single__detail-img--2" src={this.state.detailImg2} />
+                    <div className="project-single__technical-overview">
+                        <h2 className="project-single__technical-overview__title">Technical Overview</h2>
+                        <div className="project-single__technical-overview__text" dangerouslySetInnerHTML={{__html: this.state.technicalOverview}}></div>
                     </div>
+                    
                 </div>
-                <h2>Technical Overview</h2>
-                <div className="project-single__technical-overview" dangerouslySetInnerHTML={{__html: this.state.technicalOverview}}></div>
+                
             </section>
 
         );

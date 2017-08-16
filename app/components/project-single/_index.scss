@@ -1,0 +1,40 @@
+.project-single{}
+
+.project-single__description{
+    @include fs4();
+    margin: rem(72) 0;
+    
+    @include bp($m){
+        max-width: 75%;
+        margin: rem(200) 0;
+    }
+}
+
+.project-single__detail-img{
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    width: 100%; // Temp Fix: Image sizes need to be increased
+}
+
+.project-single__subtitle{
+    @include fs4();
+}
+
+.project-single__technical-overview{
+    margin: rem(72) 0;
+    @include bp($m){
+        max-width: 75%;
+        margin: rem(200) 0;
+    }
+}
+
+.project-single__technical-overview__title{
+    @include fs4();
+    margin-bottom: rem(24);
+    @include bp($m){
+        margin-bottom: rem(48);
+    }
+}
+
+.project-single__technical-overview__text{
+    @include fs2();
+}

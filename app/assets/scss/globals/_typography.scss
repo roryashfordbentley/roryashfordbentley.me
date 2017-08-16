@@ -42,7 +42,7 @@
 }
 
 @mixin fs6(){ 
-    font-size: rem(42);
+    font-size: rem(36);
     @include bp($m){ font-size: rem(48); }
     @include bp($l){ font-size: rem(56); }
     @include bp($xl){ font-size: rem(60); }
