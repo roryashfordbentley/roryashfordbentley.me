@@ -2,7 +2,6 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ProjectsGrid from '../projects-grid';
 
 class ProjectOverview extends React.Component {
     render() {

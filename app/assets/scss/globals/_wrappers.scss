@@ -13,7 +13,7 @@
 }
     // A thinner wrapper modifier
     .wrapper--small {
-        width: 75%;
+        width: 80%;
         @include at-breakpoint($l){ 
             max-width: 1200px; 
         }

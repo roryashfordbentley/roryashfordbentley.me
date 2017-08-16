@@ -7,13 +7,19 @@
     width: auto;
     margin: 0;
     cursor: pointer;
-    border: rem(4) solid;
+    border: rem(3) solid;
     color: $text;
     font-size: rem(20);
     font-weight: 500;
-    padding: rem(8) rem(16);
+    padding: rem(6) rem(12);
     outline: none;
     -webkit-font-smoothing: antialiased;
+    @include fs1();
+
+    @include bp($m){
+        padding: rem(8) rem(16);
+        border: rem(4) solid;
+    }
 
     &:focus{
         box-shadow: none;

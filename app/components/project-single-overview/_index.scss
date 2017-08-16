@@ -3,19 +3,30 @@
 .project-overview{
     position: relative;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    @include bp($m){
+        justify-content: flex-end;
+        flex-direction: row;
+    }
 }
 
 .project-overview__text{
-    position: absolute;
-    bottom: rem(60);
-    left: 0;
+    margin-bottom: rem(24);
+    @include bp($m){
+        position: absolute;
+        bottom: rem(60);
+        left: 0;
+        margin-bottom: 0;
+    }
 }
 
 .project-overview__taxonomy{
     display: block;
-    margin-bottom: rem(24);
+    margin-bottom: rem(12);
     @include fs2();
+    @include bp($m){
+        margin-bottom: rem(24);
+    }
 }
 
 .project-overview__taxonomy--bold{
@@ -30,13 +41,21 @@
 
 .project-overview__title__heading{
     position: relative;
-    padding-top: rem(24);
-    z-index: 1000;
+    padding-top: rem(22);
+    z-index: 2;
     @include fs6();
+    @include bp($m){
+        padding-top: rem(24);
+    }
 }
 
 .project-overview__stripes{
     position: absolute;
+    width: rem(320);
+    margin-left: rem(-20);
+    @include bp($m){
+        width: rem(420);
+    }
 }
 
 .project-overview__stripes__stripe{
@@ -44,19 +63,32 @@
 }
 
 .project-overview__cover{
-    //width: 75%;
+    @include bp($m){
+        max-width: 75%;
+        margin-left: auto;
+    }
+
+    @include bp($l){
+        max-width: 80%;
+        margin-left: auto;
+    }
 }
 
 .project-overview__cover-img{
     display: block;
     box-shadow: 0 6px 15px rgba(0,0,0,0.3);
     margin-bottom: rem(48);
+    width: 100%;
 }
 
 .project-overview__btn{
-    display: block;
-    margin-left: auto;
-    width: rem(180);
+    display: inline-block;
+    
     text-align: center;
+    @include bp($m){
+        display: block;
+        margin-left: auto;
+        width: rem(180);
+    }
 }
 

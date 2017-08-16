@@ -1,0 +1,30 @@
+.detail-imgs{
+    position: relative;
+    overflow: hidden;
+    //background: pink;
+}
+
+.detail-imgs__stripes{
+    position: absolute;
+    width: 140%;
+    max-width: rem(2150);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.detail-imgs__stripes__stripe{
+    fill: $brand;
+}
+
+.detail-imgs__grid{
+    padding: rem(45) 0;
+}
+
+.detail-imgs__img{
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    width: 100%; // Temp Fix: Image sizes need to be increased
+    margin-bottom: rem(24);
+    @include bp($m){
+        margin: 0;
+    }
+}

@@ -3,6 +3,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ProjectOverview from '../project-single-overview';
+import DetailImages from '../project-single-detail-images';
+import TechnicalOverview from '../project-single-technical-overview';
+import ProjectDescription from '../project-single-description';
 
 class Projects extends React.Component {
     
@@ -51,25 +54,10 @@ class Projects extends React.Component {
     render() {
         return (
             <section className="project-single">
-
                 <ProjectOverview taxonomy={this.state.taxonomy} title={this.state.title} img={this.state.coverImg} link={this.state.url} />
-                <div className="wrapper">
-                    <div className="project-single__description" dangerouslySetInnerHTML={{__html: this.state.content}}></div>
-                    <div className="g">
-                        <div className="gi--1-1  gi--2-3--m">
-                            <img className="project-single__detail-img  project-single__detail-img--1" src={this.state.detailImg1} />
-                        </div>
-                        <div className="gi--1-1  gi--1-3--m">
-                            <img className="project-single__detail-img  project-single__detail-img--2" src={this.state.detailImg2} />
-                        </div>
-                    </div>
-                    <div className="project-single__technical-overview">
-                        <h2 className="project-single__technical-overview__title">Technical Overview</h2>
-                        <div className="project-single__technical-overview__text" dangerouslySetInnerHTML={{__html: this.state.technicalOverview}}></div>
-                    </div>
-                    
-                </div>
-                
+                <ProjectDescription text={this.state.content} />
+                <DetailImages img1={this.state.detailImg1} img2={this.state.detailImg2} />
+                <TechnicalOverview text={this.state.technicalOverview} />
             </section>
 
         );
