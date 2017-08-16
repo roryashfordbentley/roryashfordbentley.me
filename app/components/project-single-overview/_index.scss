@@ -23,7 +23,7 @@
 .project-overview__taxonomy{
     display: block;
     margin-bottom: rem(12);
-    @include fs2();
+    @include fs1();
     @include bp($m){
         margin-bottom: rem(24);
     }
