@@ -8,9 +8,6 @@
 }
 
 .logo{
-    font-size: rem(24);
+    @include fs4();
     z-index: 1001;
-    @include bp($m){
-        font-size: rem(42);
-    }
 }

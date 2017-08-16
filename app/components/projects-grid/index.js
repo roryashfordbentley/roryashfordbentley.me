@@ -36,9 +36,9 @@ class ProjectsGrid extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="projects-grid">
                 <div className="wrapper">
-                    <h1>{this.props.title}</h1>
+                    <h1 className="projects-grid__title">{this.props.title}</h1>
 
                     <div className="g">
                         {

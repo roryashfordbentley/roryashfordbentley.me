@@ -16,9 +16,7 @@
 .project-overview__taxonomy{
     display: block;
     margin-bottom: rem(24);
-    font-size: rem(16);
-    @include bp($m){ font-size: rem(18); }
-    @include bp($l){ font-size: rem(24); }
+    @include fs2();
 }
 
 .project-overview__taxonomy--bold{
@@ -29,15 +27,13 @@
     position: relative;
     padding-bottom: rem(24);
     font-weight: 400;
-    font-size: rem(30);
-    @include bp($m){ font-size: rem(40); }
-    @include bp($l){ font-size: rem(60); }
 }
 
 .project-overview__title__heading{
     position: relative;
     padding-top: rem(24);
     z-index: 1000;
+    @include fs6();
 }
 
 .project-overview__stripes{
