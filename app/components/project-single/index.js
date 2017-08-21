@@ -2,6 +2,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Fetcher from '../../tools/fetcher';
+
 import ProjectOverview from '../project-single-overview';
 import DetailImages from '../project-single-detail-images';
 import TechnicalOverview from '../project-single-technical-overview';
@@ -28,6 +30,8 @@ class Projects extends React.Component {
     }
 
     getProjectData(url,slug) {
+
+
         fetch(url + slug + '&_embed')
         .then((response) => response.json())
         .then((data) => {
@@ -40,9 +44,9 @@ class Projects extends React.Component {
                 url: data[0].acf.link_to_project,
                 content: data[0].content.rendered,
                 technicalOverview: data[0].acf.technical_overview,
-                coverImg: data[0].acf.cover_image_landscape.sizes.landscape_large,
-                detailImg1: data[0].acf.detail_image_1.sizes.landscape_large,
-                detailImg2: data[0].acf.detail_image_2.sizes.portrait_large,
+                coverImg: data[0].acf.cover_image_landscape ? data[0].acf.cover_image_landscape.sizes.landscape_cropped : '',
+                detailImg1: data[0].acf.detail_image_1 ? data[0].acf.detail_image_1.sizes.landscape_large : '',
+                detailImg2: data[0].acf.detail_image_2 ? data[0].acf.detail_image_2.sizes.landscape_large : '',
                 codepen: data[0].acf.codepen_embed
             });
         }).catch(function(err) {
@@ -60,7 +64,6 @@ class Projects extends React.Component {
                 <ProjectOverview taxonomy={this.state.taxonomy} title={this.state.title} img={this.state.coverImg} link={this.state.url} />
                 <ProjectDescription text={this.state.content} />
                 <Codepen code={this.state.codepen} />
-                <DetailImages img1={this.state.detailImg1} img2={this.state.detailImg2} />
                 <TechnicalOverview text={this.state.technicalOverview} />
             </section>
 
