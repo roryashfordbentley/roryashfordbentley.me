@@ -10,4 +10,7 @@
 .logo{
     @include fs4();
     z-index: 1001;
+    a{
+        color: $text;
+    }
 }

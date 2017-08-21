@@ -2,7 +2,6 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Fetcher from '../../tools/fetcher';
 
 import ProjectOverview from '../project-single-overview';
 import DetailImages from '../project-single-detail-images';
@@ -64,6 +63,7 @@ class Projects extends React.Component {
                 <ProjectOverview taxonomy={this.state.taxonomy} title={this.state.title} img={this.state.coverImg} link={this.state.url} />
                 <ProjectDescription text={this.state.content} />
                 <Codepen code={this.state.codepen} />
+                <DetailImages img1={this.state.detailImg1} img2={this.state.detailImg2} />
                 <TechnicalOverview text={this.state.technicalOverview} />
             </section>
 

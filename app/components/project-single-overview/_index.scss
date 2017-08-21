@@ -41,19 +41,25 @@
 
 .project-overview__title__heading{
     position: relative;
-    padding-top: rem(22);
+    padding-top: rem(5);
     z-index: 2;
     @include fs6();
     @include bp($m){
+        padding-top: rem(12);
+    }
+    @include bp($l){
         padding-top: rem(24);
     }
 }
 
 .project-overview__stripes{
     position: absolute;
-    width: rem(320);
+    width: rem(200);
     margin-left: rem(-20);
     @include bp($m){
+        width: rem(300);
+    }
+    @include bp($l){
         width: rem(420);
     }
 }
