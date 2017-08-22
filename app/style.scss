@@ -19,6 +19,7 @@
 //@import "assets/scss/tools/_aspect-ratio.scss";
 
 // Components
+@import "components/button/_index.scss";
 @import "components/header/_index.scss";
 @import "components/hamburger/_index.scss";
 @import "components/nav/_index.scss";
@@ -28,7 +29,8 @@
 @import "components/projects-grid/_index.scss";
 @import "components/projects-grid-item/_index.scss";
 @import "components/project-single/_index.scss";
-@import "components/project-single-overview/_index.scss";
+@import "components/project-single-header/_index.scss";
+@import "components/project-single-cover-image/_index.scss";
 @import "components/project-single-detail-images/_index.scss";
 @import "components/project-single-technical-overview/_index.scss";
 @import "components/project-single-description/_index.scss";
