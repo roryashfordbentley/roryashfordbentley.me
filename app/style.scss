@@ -10,13 +10,9 @@
 @import "assets/scss/globals/_reset.scss";
 @import "assets/scss/globals/_html-body.scss";
 @import "assets/scss/globals/_typography.scss";
-@import "assets/scss/globals/_buttons.scss";
 @import "assets/scss/globals/_grid-setup.scss";
 @import "assets/scss/globals/_imgs.scss";
 @import "assets/scss/globals/_wrappers.scss";
-
-//tools
-//@import "assets/scss/tools/_aspect-ratio.scss";
 
 // Components
 @import "components/button/_index.scss";
@@ -34,3 +30,6 @@
 @import "components/project-single-detail-images/_index.scss";
 @import "components/project-single-technical-overview/_index.scss";
 @import "components/project-single-description/_index.scss";
+@import "components/icons/_index.scss"; // basic styling for ALL icons
+
+

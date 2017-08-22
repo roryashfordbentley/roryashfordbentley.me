@@ -3,6 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Button from '../button';
+import RightArrow from '../icons/right-arrow';
 
 class ProjectHeader extends React.Component {
     render() {
@@ -15,7 +16,10 @@ class ProjectHeader extends React.Component {
                     <h1 className="project-header__title">{this.props.title}</h1>
                 </div>
                 <div className="project-header__aside">
-                    <Button link={this.props.link} title="View Project" />
+                    <Button link={this.props.link}>
+                        View Project
+                        <RightArrow />
+                    </Button>
                 </div>
             </section>              
         );
