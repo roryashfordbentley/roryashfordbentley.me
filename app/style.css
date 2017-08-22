@@ -546,25 +546,25 @@ a img {
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.8rem;
   z-index: 1001;
 }
 
 @media (min-width: 800px) {
   .logo {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
 }
 
 @media (min-width: 1100px) {
   .logo {
-    font-size: 3.6rem;
+    font-size: 2.8rem;
   }
 }
 
 @media (min-width: 1400px) {
   .logo {
-    font-size: 4.2rem;
+    font-size: 3.2rem;
   }
 }
 
@@ -582,6 +582,13 @@ a img {
 }
 
 @media (min-width: 800px) {
+  .hamburger {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (min-width: 1100px) {
   .hamburger {
     width: 4rem;
     height: 4rem;

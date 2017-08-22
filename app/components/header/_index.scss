@@ -8,7 +8,7 @@
 }
 
 .logo{
-    @include fs4();
+    @include fs3();
     z-index: 1001;
     a{
         color: $text;

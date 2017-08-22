@@ -5,7 +5,13 @@
     outline: none;
     width: rem(20);
     height: rem(20);
+    
     @include bp($m){
+        width: rem(30);
+        height: rem(30);
+    }
+
+    @include bp($l){
         width: rem(40);
         height: rem(40);
     }
