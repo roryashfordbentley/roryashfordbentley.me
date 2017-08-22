@@ -3,7 +3,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ProjectOverview from '../project-single-overview';
+import ProjectHeader from '../project-single-header';
+
+import ProjectCoverImage from '../project-single-cover-image';
 import DetailImages from '../project-single-detail-images';
 import TechnicalOverview from '../project-single-technical-overview';
 import ProjectDescription from '../project-single-description';
@@ -60,7 +62,8 @@ class Projects extends React.Component {
     render() {
         return (
             <section className="project-single">
-                <ProjectOverview taxonomy={this.state.taxonomy} title={this.state.title} img={this.state.coverImg} link={this.state.url} />
+                <ProjectHeader taxonomy={this.state.taxonomy} title={this.state.title} link={this.state.url} />
+                <ProjectCoverImage img={this.state.coverImg} />
                 <ProjectDescription text={this.state.content} />
                 <Codepen code={this.state.codepen} />
                 <DetailImages img1={this.state.detailImg1} img2={this.state.detailImg2} />

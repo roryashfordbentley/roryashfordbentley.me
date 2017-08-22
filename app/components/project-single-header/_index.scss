@@ -1,0 +1,18 @@
+.project-header{
+    display: flex;
+    justify-content: space-between;
+    padding: rem(24);
+    @include bp($m){
+        padding: rem(48);
+    }
+}
+
+.project-header__taxonomy{
+    display: block;
+    @include fs1();
+
+}
+
+.project-header__taxonomy--bold{
+    font-weight: 500;
+}
