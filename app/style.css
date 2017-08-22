@@ -495,6 +495,7 @@ a img {
   font-size: 2rem;
   font-weight: 500;
   padding: 0.3rem 1.2rem;
+  border: none;
   outline: none;
   -webkit-font-smoothing: antialiased;
   border-radius: 20rem;
@@ -851,30 +852,65 @@ a img {
   }
 }
 
-.projects-grid-title {
+.projects-grid {
+  padding: 4.2rem 2.4rem;
+}
+
+@media (min-width: 800px) {
+  .projects-grid {
+    padding: 6.4rem 4.8rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .projects-grid {
+    padding: 8rem 4.8rem;
+  }
+}
+
+.project-grid__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4.8rem;
+}
+
+.projects-grid--work {
+  background: #F5F5F5;
+}
+
+.projects-grid--open-source {
+  background: #e8e8e8;
+}
+
+.projects-grid--experiment {
+  background: gainsboro;
+}
+
+.projects-grid__title {
   font-size: 2rem;
 }
 
 @media (min-width: 800px) {
-  .projects-grid-title {
+  .projects-grid__title {
     font-size: 3rem;
   }
 }
 
 @media (min-width: 1100px) {
-  .projects-grid-title {
+  .projects-grid__title {
     font-size: 3.6rem;
   }
 }
 
 @media (min-width: 1400px) {
-  .projects-grid-title {
+  .projects-grid__title {
     font-size: 4.2rem;
   }
 }
 
 .project-preview {
-  margin-bottom: 4.8rem;
+  display: block;
+  height: 100%;
 }
 
 .project-preview__img {
@@ -883,24 +919,24 @@ a img {
 }
 
 .project-preview__title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 @media (min-width: 800px) {
   .project-preview__title {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
   }
 }
 
 @media (min-width: 1100px) {
   .project-preview__title {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
   }
 }
 
 @media (min-width: 1400px) {
   .project-preview__title {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
 }
 
@@ -1250,4 +1286,53 @@ a img {
 .icon__path {
   stroke: black;
   fill: none;
+}
+
+.prev-next {
+  display: flex;
+  align-items: flex-end;
+}
+
+.prev-next__arrow {
+  background: #2A2C2E;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  outline: none;
+}
+
+@media (min-width: 800px) {
+  .prev-next__arrow {
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+.prev-next__arrow:hover {
+  background: black;
+}
+
+.prev-next__arrow .icon {
+  height: 1rem;
+  margin-top: -3%;
+}
+
+@media (min-width: 800px) {
+  .prev-next__arrow .icon {
+    height: 1.2rem;
+  }
+}
+
+.prev-next__arrow--left {
+  border-top-left-radius: 10rem;
+  border-bottom-left-radius: 10rem;
+  margin-right: 0.2rem;
+}
+
+.prev-next__arrow--right {
+  border-top-right-radius: 10rem;
+  border-bottom-right-radius: 10rem;
+}
+
+.prev-next__arrow .icon__path {
+  stroke: white;
 }

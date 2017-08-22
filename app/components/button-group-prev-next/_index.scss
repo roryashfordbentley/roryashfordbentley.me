@@ -1,0 +1,44 @@
+.prev-next{
+    display: flex;
+    align-items: flex-end;
+}
+
+.prev-next__arrow{
+    background: $text;
+    border: none;
+    padding: rem(3) rem(6);
+    cursor: pointer;
+    outline: none;
+
+    @include bp($m){
+        padding: rem(6) rem(12);
+    }
+
+    &:hover{
+        background: black;
+    }
+}
+
+.prev-next__arrow .icon{
+    height: rem(10);
+    margin-top: -3%;
+    
+    @include bp($m){
+        height: rem(12);
+    }
+}
+
+.prev-next__arrow--left{
+    border-top-left-radius: rem(100);
+    border-bottom-left-radius: rem(100);
+    margin-right: rem(2);
+}
+
+.prev-next__arrow--right{
+    border-top-right-radius: rem(100);
+    border-bottom-right-radius: rem(100);
+}
+
+.prev-next__arrow .icon__path{
+    stroke: white;
+}

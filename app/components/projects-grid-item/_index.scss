@@ -1,5 +1,7 @@
 .project-preview{
-    margin-bottom: rem(48);
+    display: block;
+    //margin-bottom: rem(48);
+    height: 100%;
 }
 
 .project-preview__img{
@@ -8,5 +10,5 @@
 }
 
 .project-preview__title{
-    @include fs3();
+    @include fs2();
 }
