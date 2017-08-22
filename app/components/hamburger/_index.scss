@@ -3,11 +3,11 @@
     background: none;
     border: none;
     outline: none;
-    width: rem(41);
-    height: rem(41);
+    width: rem(20);
+    height: rem(20);
     @include bp($m){
-        width: rem(60);
-        height: rem(60);
+        width: rem(40);
+        height: rem(40);
     }
 
     &:hover{
@@ -21,13 +21,13 @@
 
     .hamburger__line{
         stroke: black;
-        stroke-width: 6; 
+        stroke-width: 5; 
         transform-origin: 50% 50%;
         transition: transform 0.5s;
     }
 
     .hamburger__line--1{
-        transform: translateY(-20px) rotate(0deg);
+        transform: translateY(-30px) rotate(0deg);
     }
 
     .hamburger__line--2{
@@ -36,7 +36,7 @@
     }
 
     .hamburger__line--3{
-        transform: translateY(20px) rotate(0deg);
+        transform: translateY(30px) rotate(0deg);
     }
 
 .hamburger--open{
