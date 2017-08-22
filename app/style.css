@@ -1109,7 +1109,7 @@ a img {
 @media (min-width: 800px) {
   .technical-overview {
     max-width: 75%;
-    margin: 16rem 0;
+    margin: 8rem 0;
   }
 }
 
@@ -1190,7 +1190,7 @@ a img {
 @media (min-width: 800px) {
   .project-single__description {
     max-width: 75%;
-    margin: 16rem 0;
+    margin: 12rem 0;
   }
 }
 
