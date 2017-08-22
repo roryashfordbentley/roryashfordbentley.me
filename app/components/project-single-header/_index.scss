@@ -16,3 +16,21 @@
 .project-header__taxonomy--bold{
     font-weight: 500;
 }
+
+.project-header__title{
+    @include fs6();
+}
+
+.project-header__aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: rem(14);
+    @include bp($m){
+        padding-bottom: rem(20);
+    }
+
+    @include bp($l){
+        padding-bottom: rem(24);
+    }
+}

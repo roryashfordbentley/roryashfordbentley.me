@@ -495,7 +495,7 @@ a img {
   color: white;
   font-size: 2rem;
   font-weight: 500;
-  padding: 0.6rem 1.2rem;
+  padding: 0.3rem 1.2rem;
   outline: none;
   -webkit-font-smoothing: antialiased;
   border-radius: 20rem;
@@ -1006,6 +1006,47 @@ a img {
 
 .project-header__taxonomy--bold {
   font-weight: 500;
+}
+
+.project-header__title {
+  font-size: 3.6rem;
+}
+
+@media (min-width: 800px) {
+  .project-header__title {
+    font-size: 4.8rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .project-header__title {
+    font-size: 5.6rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .project-header__title {
+    font-size: 6rem;
+  }
+}
+
+.project-header__aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 1.4rem;
+}
+
+@media (min-width: 800px) {
+  .project-header__aside {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .project-header__aside {
+    padding-bottom: 2.4rem;
+  }
 }
 
 .project-cover {
