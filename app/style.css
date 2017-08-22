@@ -1004,6 +1004,14 @@ a img {
   }
 }
 
+.project-header__taxonomy a {
+  color: #6A6A6A;
+}
+
+.project-header__taxonomy a:hover {
+  color: black;
+}
+
 .project-header__taxonomy--bold {
   font-weight: 500;
 }

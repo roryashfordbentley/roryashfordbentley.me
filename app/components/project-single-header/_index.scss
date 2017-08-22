@@ -10,7 +10,14 @@
 .project-header__taxonomy{
     display: block;
     @include fs1();
+}
 
+.project-header__taxonomy a{
+    color: $clr_text_light;
+
+    &:hover{
+        color: black;
+    }
 }
 
 .project-header__taxonomy--bold{
