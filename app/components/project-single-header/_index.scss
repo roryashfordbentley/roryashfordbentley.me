@@ -1,8 +1,8 @@
 .project-header{
-    display: flex;
-    justify-content: space-between;
     padding: rem(24);
     @include bp($m){
+        display: flex;
+        justify-content: space-between;
         padding: rem(48);
     }
 }
@@ -26,14 +26,17 @@
 
 .project-header__title{
     @include fs6();
+    margin-bottom: rem(12);
+    @include bp($m){
+        margin-bottom: 0;
+    }
 }
 
 .project-header__aside{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: rem(14);
     @include bp($m){
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         padding-bottom: rem(20);
     }
 

@@ -1,6 +1,5 @@
 .btn{
-    display: flex;
-    flex-direction: row;
+    display: inline-block;
     width: auto;
     margin: 0;
     cursor: pointer;
@@ -32,9 +31,9 @@
 
 // btn with icon
 .btn .icon{
-    height: rem(12);
+    height: rem(10);
     padding-left: rem(10);
-    margin-top: 3%;
+    margin-top: -2%;
     @include bp($m){
         height: rem(14);
     }

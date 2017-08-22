@@ -1,6 +1,14 @@
 .project-cover{
     background: $light_grey;
-    padding: rem(128) 0;
+    padding: rem(42) 0;
+    
+    @include bp($m){
+        padding: rem(64) 0;
+    }
+
+    @include bp($l){
+        padding: rem(128) 0;
+    }
 }
 
 .project-cover__img{
