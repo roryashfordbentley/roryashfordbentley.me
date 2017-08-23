@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -583,6 +584,10 @@ a img {
   color: #2A2C2E;
 }
 
+.logo--alt a {
+  color: white;
+}
+
 .hamburger {
   z-index: 1001;
   background: none;
@@ -637,22 +642,26 @@ a img {
 .hamburger--open .hamburger__line--1 {
   transform: rotate(45deg);
   transition: transform 0.5s;
+  stroke: white;
 }
 
 .hamburger--open .hamburger__line--2 {
   opacity: 0;
   transition: opacity .125s;
+  stroke: white;
 }
 
 .hamburger--open .hamburger__line--3 {
   transform: rotate(-45deg);
   transition: transform 0.5s;
+  stroke: white;
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   position: absolute;
   top: 0;
   right: 0;
@@ -686,15 +695,15 @@ a img {
 
 @media (min-width: 800px) {
   .nav__bg {
-    top: 5.4rem;
-    right: 5.4rem;
+    top: 4.4rem;
+    right: 4.4rem;
   }
 }
 
 .nav__bg--open {
   transform: scale(100, 100);
   transition: transform 2s, background 1s;
-  background: #CFFDE3;
+  background: #000000;
 }
 
 .nav__list {
@@ -711,32 +720,75 @@ a img {
 }
 
 .nav__item {
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.5;
-  font-size: 2rem;
+  padding: 0.8rem 0;
+  font-size: 3.6rem;
 }
 
 @media (min-width: 800px) {
   .nav__item {
-    font-size: 3rem;
+    font-size: 4.8rem;
   }
 }
 
 @media (min-width: 1100px) {
   .nav__item {
-    font-size: 3.6rem;
+    font-size: 5.6rem;
   }
 }
 
 @media (min-width: 1400px) {
   .nav__item {
-    font-size: 4.2rem;
+    font-size: 6rem;
   }
 }
 
 .nav__item a {
-  color: black;
+  color: white;
   text-decoration: none;
+}
+
+.nav__sub-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-top: 3rem;
+  border-top: 0.1rem solid #6A6A6A;
+  opacity: 0;
+  transition: opacity 0.25s ease-in;
+}
+
+.nav__sub-nav--open {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.nav__sub-nav__item {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 800px) {
+  .nav__sub-nav__item {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .nav__sub-nav__item {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .nav__sub-nav__item {
+    font-size: 1.8rem;
+  }
+}
+
+.nav__sub-nav__item a {
+  padding: 0 1rem;
+  color: white;
 }
 
 .home-intro {
@@ -901,24 +953,6 @@ a img {
   position: relative;
 }
 
-.project-preview__link::after {
-  content: "View";
-  color: white;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.7);
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  z-index: 10000;
-  transition: all 0.5s;
-}
-
-.project-preview__link:hover:after {
-  opacity: 1;
-}
-
 .project-preview__img {
   display: block;
   position: relative;
@@ -946,6 +980,10 @@ a img {
   .project-preview__title {
     font-size: 2.8rem;
   }
+}
+
+.project-preview__title a {
+  color: #2A2C2E;
 }
 
 .project-single__description {
@@ -1463,4 +1501,155 @@ a img {
 
 .slick-arrow.slick-hidden {
   display: none;
+}
+
+.about-header {
+  padding: 2.4rem;
+}
+
+@media (min-width: 800px) {
+  .about-header {
+    padding: 4.8rem;
+  }
+}
+
+.about-header__title {
+  font-size: 3.6rem;
+  margin-bottom: 1.2rem;
+}
+
+@media (min-width: 800px) {
+  .about-header__title {
+    font-size: 4.8rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .about-header__title {
+    font-size: 5.6rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .about-header__title {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .about-header__title {
+    margin-bottom: 0;
+  }
+}
+
+/*
+<section className="about-content  about-content--who">
+    <div className="about-content__heading">
+        <h2 className="about-content__title">Who?</h2>
+    </div>
+    <div className="about-content__info">
+        <p>I’m a 32 year old developer with 10 years of experience building websites and apps for a wide range of clients.</p>   
+    </div>
+</section>
+ */
+.about-content {
+  padding: 2.4rem 2.4rem;
+}
+
+@media (min-width: 800px) {
+  .about-content {
+    display: flex;
+    padding: 9.6rem 4.8rem;
+  }
+}
+
+.about-content--who {
+  background: #F5F5F5;
+}
+
+.about-content--who p {
+  font-size: 1.8rem;
+}
+
+@media (min-width: 800px) {
+  .about-content--who p {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .about-content--who p {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .about-content--who p {
+    font-size: 3.2rem;
+  }
+}
+
+.about-content--what {
+  background: #e8e8e8;
+}
+
+.about-content--clients {
+  background: #dcdcdc;
+}
+
+@media (min-width: 800px) {
+  .about-content__heading {
+    width: 20%;
+  }
+}
+
+.about-content__title {
+  font-size: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+@media (min-width: 800px) {
+  .about-content__title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .about-content__title {
+    font-size: 3.6rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .about-content__title {
+    font-size: 4.2rem;
+  }
+}
+
+.about-content__info {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 800px) {
+  .about-content__info {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .about-content__info {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .about-content__info {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .about-content__info {
+    width: 60%;
+  }
 }
