@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     position: absolute;
     top: 0;
     right: 0;
@@ -32,16 +33,16 @@
     transform: scale(1,1);
     transition: transform 1s, background 2s ease-out;
     @include bp($m){
-        top: rem(54);
-        right: rem(54);
+        top: rem(44);
+        right: rem(44);
     }
 }
 
-    .nav__bg--open{
-        transform: scale(100,100);
-        transition: transform 2s, background 1s;
-        background: $clr_brand;
-    }
+.nav__bg--open{
+    transform: scale(100,100);
+    transition: transform 2s, background 1s;
+    background: $clr_black; 
+}
 
 .nav__list{
     text-align: center;
@@ -51,17 +52,43 @@
     transition: opacity 0.25s ease-in;
 }
 
-    .nav__list--open{
-        opacity: 1;
-        transition: opacity 0.5s ease-in;
-    }
+.nav__list--open{
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
 
 .nav__item{
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.5;
-    @include fs4();
+    padding: rem(8) 0;
+    @include fs6();
     a{
-        color: black;
+        color: white;
         text-decoration: none;
     }
 }
+
+.nav__sub-nav{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-top: rem(30);
+    border-top: rem(1) solid $clr_grey_4;
+    opacity: 0;
+    transition: opacity 0.25s ease-in;
+}
+
+.nav__sub-nav--open{
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.nav__sub-nav__item{
+    @include fs1();
+
+    a{
+        padding: 0 rem(10);
+        color: white;
+    }
+}
+

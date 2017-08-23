@@ -2,6 +2,11 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+    BrowserRouter,
+    Route,
+    Link
+} from 'react-router-dom';
 
 class FeaturedProject extends React.Component {
 
@@ -21,12 +26,12 @@ class FeaturedProject extends React.Component {
         fetch(url)
         .then((response) => response.json())
         .then((data) => {
-            //console.log(data);
+            console.log(data);
 
             this.setState({ 
                 title: data.title.rendered,
                 taxonomy: data._embedded['wp:term'][0][0].name,
-                url: 'http://localhost/portfolio/tbc',
+                slug: data.slug,
                 img: this.aspectRatioImg(data)
             });
         }).catch(function(err) {
@@ -65,9 +70,13 @@ class FeaturedProject extends React.Component {
         return (
             <div className={this.aspectRatioGrid()}>
                 <div className="featured-project">
-                    <img className="featured-project__img" src={this.state.img} />
+                    <Link to={'/projects/' + this.state.slug}>
+                        <img className="featured-project__img" src={this.state.img} />
+                    </Link>
                     <span className="featured-project__cat">{this.state.taxonomy}</span>
-                    <h2 className="featured-project__title">{this.state.title}</h2>
+                    <Link to={'/projects/' + this.state.slug}>
+                        <h2 className="featured-project__title">{this.state.title}</h2>
+                    </Link>
                 </div>
             </div>
         );

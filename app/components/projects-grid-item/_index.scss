@@ -6,23 +6,6 @@
 
 .project-preview__link{
     position: relative;
-    &::after{
-        content: "View";
-        color: white;
-        position: absolute;
-        background:rgba(0,0,0,0.7);
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        opacity: 0;
-        z-index: 10000;
-        transition: all 0.5s;
-    }
-
-    &:hover:after{
-        opacity: 1;
-    }
 }
 
 .project-preview__img{
@@ -34,4 +17,7 @@
 
 .project-preview__title{
     @include fs2();
+    a{
+        color: $clr_grey_5;
+    }
 }

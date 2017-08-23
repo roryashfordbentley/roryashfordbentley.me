@@ -14,11 +14,6 @@ import {
 
 class Navigation extends React.Component {
 
-    closeMenu(){
-        console.log('clicked');
-        // need to change state of another element... fuuuuuuck!
-    }
-
     render() {
         return (
             <nav className={this.props.toggle === "open" ? "nav nav--open" : "nav"}>
@@ -27,7 +22,13 @@ class Navigation extends React.Component {
                     <li onClick={this.props.onClick} className="nav__item"><Link to="/">Home</Link></li>
                     <li onClick={this.props.onClick} className="nav__item"><Link to="/projects">Projects</Link></li>
                     <li onClick={this.props.onClick} className="nav__item"><Link to="/about">About</Link></li>
-                    <li onClick={this.props.onClick} className="nav__item"><Link to="/contact">Contact</Link></li>
+                </ul>
+                <ul className={this.props.toggle === "open" ? "nav__sub-nav nav__sub-nav--open" : "nav__sub-nav"}>
+                    <li className="nav__sub-nav__item"><a href="#">Mail</a></li>
+                    <li className="nav__sub-nav__item"><a href="//github.com/roikles">Github</a></li>
+                    <li className="nav__sub-nav__item"><a href="//codepen.io/roikles/">Codepen</a></li>
+                    <li className="nav__sub-nav__item"><a href="//twitter.com/roikles">Twitter</a></li>
+                    <li className="nav__sub-nav__item"><a href="//instagram.com/roikles">Instagram</a></li>
                 </ul>
             </nav>
         );
