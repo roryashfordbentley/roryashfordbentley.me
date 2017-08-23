@@ -1,10 +1,17 @@
 .prev-next{
     display: flex;
     align-items: flex-end;
+    margin-bottom: rem(8);
+    @include bp($m){
+        margin-bottom: rem(12);
+    }
+    @include bp($l){
+        margin-bottom: rem(16);
+    }
 }
 
 .prev-next__arrow{
-    background: $text;
+    background: $clr_text;
     border: none;
     padding: rem(3) rem(6);
     cursor: pointer;

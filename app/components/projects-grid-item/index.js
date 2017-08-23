@@ -13,10 +13,12 @@ class ProjectsGridItem extends React.Component {
     render() {
         return (
             <div className="project-preview">
-                <Link to={'/projects/' + this.props.slug}>
+                <Link className="project-preview__link" to={'/projects/' + this.props.slug}>
                     <img className="project-preview__img" onLoad={() => {window.dispatchEvent(new Event('resize'));}} src={this.props.img} />
                 </Link>
-                <h2 className="project-preview__title">{this.props.title}</h2>
+                <h2 className="project-preview__title">
+                    <Link to={'/projects/' + this.props.slug}>{this.props.title}</Link>
+                </h2>
             </div>
         );
     }

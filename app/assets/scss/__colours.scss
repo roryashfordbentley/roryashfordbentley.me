@@ -2,8 +2,17 @@
 // Colours
 ////
 
-$text: #2A2C2E; 
-$clr_text_light: #6A6A6A;
-$brand: #CFFDE3;
-$brand_dark: #18A37E;
-$light_grey: #F5F5F5;
+$clr_grey_1: #F5F5F5;
+$clr_grey_2: #e8e8e8;
+$clr_grey_3: #dcdcdc;
+$clr_grey_4: #6A6A6A;
+$clr_grey_5: #2A2C2E;
+
+$clr_text: $clr_grey_5; 
+$clr_text_light: $clr_grey_4;
+
+$clr_brand: #CFFDE3;
+$clr_brand_dark: #18A37E;
+
+$clr_light_grey: #F5F5F5;
+
