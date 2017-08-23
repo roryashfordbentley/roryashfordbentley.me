@@ -848,20 +848,53 @@ a img {
   overflow: hidden;
 }
 
-.detail-imgs__stripes {
-  position: absolute;
-  width: 162%;
-  max-width: 210rem;
-  left: 50%;
-  transform: translateX(-50%);
+/*.detail-imgs__stripes{
+    position: absolute;
+    width: 162%;
+    max-width: rem(2100);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.detail-imgs__stripes__stripe {
-  fill: #CFFDE3;
-}
-
+.detail-imgs__stripes__stripe{
+    fill: $clr_brand;
+}*/
 .detail-imgs__grid {
-  padding: 4.5rem 0;
+  position: relative;
+  display: flex;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  max-width: 140rem;
+  margin-left: -6rem;
+}
+
+.detail-img {
+  padding-left: 6rem;
+  margin-bottom: 2.4rem;
+}
+
+.detail-img--landscape {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 800px) {
+  .detail-img--landscape {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%;
+  }
+}
+
+.detail-img--portrait {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 800px) {
+  .detail-img--portrait {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+  }
 }
 
 .detail-imgs__img {
