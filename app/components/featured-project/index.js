@@ -54,9 +54,9 @@ class FeaturedProject extends React.Component {
     }
 
     aspectRatioGrid(){
-        let gridClass = 'gi--1-1  gi--2-3--m';
+        let gridClass = 'featured-project  featured-project--landscape';
         if(this.props.aspect === 'portrait') {
-            gridClass = 'gi--1-1  gi--1-3--m';
+            gridClass = 'featured-project  featured-project--portrait';
         } 
 
         return gridClass;
@@ -69,15 +69,13 @@ class FeaturedProject extends React.Component {
     render() {
         return (
             <div className={this.aspectRatioGrid()}>
-                <div className="featured-project">
-                    <Link to={'/projects/' + this.state.slug}>
-                        <img className="featured-project__img" src={this.state.img} />
-                    </Link>
-                    <span className="featured-project__cat">{this.state.taxonomy}</span>
-                    <Link to={'/projects/' + this.state.slug}>
-                        <h2 className="featured-project__title">{this.state.title}</h2>
-                    </Link>
-                </div>
+                <Link to={'/projects/' + this.state.slug}>
+                    <img className="featured-project__img" src={this.state.img} />
+                </Link>
+                <span className="featured-project__cat">{this.state.taxonomy}</span>
+                <Link to={'/projects/' + this.state.slug}>
+                    <h2 className="featured-project__title">{this.state.title}</h2>
+                </Link>
             </div>
         );
     }

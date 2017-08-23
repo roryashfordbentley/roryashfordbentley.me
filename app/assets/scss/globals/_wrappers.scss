@@ -7,14 +7,7 @@
 .wrapper {
     margin: 0 auto;
     width: 90%;
-    @include at-breakpoint($l){ 
+    @include bp($l){ 
         max-width: 1400px; 
     }
 }
-    // A thinner wrapper modifier
-    .wrapper--small {
-        width: 80%;
-        @include at-breakpoint($l){ 
-            max-width: 1200px; 
-        }
-    }

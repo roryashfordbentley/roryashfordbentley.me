@@ -13,19 +13,6 @@
     }
 }
 
-// who
-
-/*
-<section className="about-content  about-content--who">
-    <div className="about-content__heading">
-        <h2 className="about-content__title">Who?</h2>
-    </div>
-    <div className="about-content__info">
-        <p>I’m a 32 year old developer with 10 years of experience building websites and apps for a wide range of clients.</p>   
-    </div>
-</section>
- */
-
 .about-content{
     padding: rem(24) rem(24);
     @include bp($m){

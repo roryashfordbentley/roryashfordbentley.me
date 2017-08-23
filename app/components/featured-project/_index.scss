@@ -1,5 +1,29 @@
 .featured-project{
-    margin-bottom: rem(48);
+    padding-left: rem(60);
+}
+
+.featured-project--landscape{
+    flex-basis: 100%;
+    max-width: 100%;
+
+    @include bp($m){
+        flex-basis: 66.66667%;
+        max-width: 66.66667%;
+    }
+}
+
+.featured-project--portrait{
+    flex-basis: 100%;
+    max-width: 100%;
+
+    @include bp($m){
+        flex-basis: 33.33333%;
+        max-width: 33.33333%;
+    }
+}
+
+.featured-project a{
+    width: 100%;
 }
 
 .featured-project__img{

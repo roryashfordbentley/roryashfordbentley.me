@@ -1,7 +1,18 @@
-.home-work-grid{
+.featured-projects{
     background: $clr_grey_1;
     padding: rem(24) rem(24);
+    margin: 0 auto;
     @include bp($m){
         padding: rem(96) rem(48);
     }
 }
+
+    .featured-projects__grid{
+        position: relative;
+        display: flex;
+        flex: 0 1 auto;
+        flex-wrap: wrap;
+        max-width: rem(1400);
+        
+        margin-left: rem(-60);
+    }
