@@ -34,17 +34,17 @@ class FeaturedProjects extends React.Component {
     render() {
         return (
             <section className="home-work-grid">
-                <div className="wrapper">
-                    <div className="g">
-                        {
-                            this.state.featuredProjects.map((project,index) => {
-                                let id = project.featured_project;
-                                let aspectRatio = project.aspect_ratio;
-                                return <FeaturedProject key={index} id={id} aspect={aspectRatio} />
-                            })
-                        }
-                    </div>
+
+                <div className="g">
+                    {
+                        this.state.featuredProjects.map((project,index) => {
+                            let id = project.featured_project;
+                            let aspectRatio = project.aspect_ratio;
+                            return <FeaturedProject key={index} id={id} aspect={aspectRatio} />
+                        })
+                    }
                 </div>
+
             </section> 
         );
     }

@@ -792,29 +792,25 @@ a img {
 }
 
 .home-intro {
-  background-image: url("assets/img/stripes.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  margin: 6rem 0;
-  padding: 6rem 0;
+  padding: 2.4rem 2.4rem;
 }
 
 @media (min-width: 800px) {
   .home-intro {
-    padding: 9.6rem 0;
+    padding: 9.6rem 4.8rem;
   }
 }
 
 @media (min-width: 1100px) {
   .home-intro {
-    padding: 12.8rem 0;
+    padding: 9.6rem 4.8rem;
+    max-width: 75%;
   }
 }
 
 .home-intro__text p {
   font-size: 3.2rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 @media (min-width: 800px) {
@@ -832,6 +828,17 @@ a img {
 @media (min-width: 1400px) {
   .home-intro__text p {
     font-size: 4.8rem;
+  }
+}
+
+.home-work-grid {
+  background: #F5F5F5;
+  padding: 2.4rem 2.4rem;
+}
+
+@media (min-width: 800px) {
+  .home-work-grid {
+    padding: 9.6rem 4.8rem;
   }
 }
 

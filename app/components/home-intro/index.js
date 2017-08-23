@@ -29,9 +29,7 @@ class HomeIntro extends React.Component {
     render() {
         return (
             <div className="home-intro">
-                <div className="wrapper">
-                    <div className="home-intro__text" dangerouslySetInnerHTML={{__html: this.state.text}}></div>
-                </div>
+                <div className="home-intro__text" dangerouslySetInnerHTML={{__html: this.state.text}}></div>
             </div>
         );
     }

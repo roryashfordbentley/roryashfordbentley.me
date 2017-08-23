@@ -1,19 +1,16 @@
 .home-intro{
-    background-image: url('assets/img/stripes.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    margin: rem(60) 0;
-    padding: rem(60) 0;
+    padding: rem(24) rem(24);
     @include bp($m){
-        padding: rem(96) 0;
+        padding: rem(96) rem(48);
     }
+
     @include bp($l){
-        padding: rem(128) 0;
+        padding: rem(96) rem(48);
+        max-width: 75%;
     }
 }
 
 .home-intro__text p{
     @include fs5();
-    font-weight: 500;
+    font-weight: 400;
 }
