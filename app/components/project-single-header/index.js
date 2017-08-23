@@ -16,7 +16,7 @@ class ProjectHeader extends React.Component {
             <section className="project-header">
                 <div className="project-header__text">
                     <span className="project-header__taxonomy">
-                        <Link to="/projects">Projects/ </Link>
+                        <Link to="/projects">Projects</Link>/ 
                         <span className="project-header__taxonomy--bold"> {this.props.taxonomy}</span>
                     </span>
                     <h1 className="project-header__title">{this.props.title}</h1>

@@ -55,7 +55,7 @@ a:hover {
   color: #000;
 }
 
-a:hover:after {
+p a:hover:after {
   position: absolute;
   content: '';
   left: 0;

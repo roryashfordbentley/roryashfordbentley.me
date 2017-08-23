@@ -73,6 +73,10 @@ a {
 
 a:hover{
     color: #000;
+}
+
+// paragraph link underlines
+p a:hover{
     &:after{
         position: absolute;
         content:'';
