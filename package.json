@@ -22,7 +22,8 @@
     "react-dom": "^15.3.2",
     "react-router": "^2.8.1",
     "react-router-dom": "^4.1.2",
-    "react-slick": "^0.14.11"
+    "react-slick": "^0.14.11",
+    "whatwg-fetch": "^2.0.3"
   },
   "browserify": {
     "transform": [

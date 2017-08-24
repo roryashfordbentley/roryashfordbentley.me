@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Fetch from 'whatwg-fetch';
 
 class HomeIntro extends React.Component {
 

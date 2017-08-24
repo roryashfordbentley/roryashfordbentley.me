@@ -2,6 +2,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Fetch from 'whatwg-fetch';
+
 import FeaturedProject from '../featured-project';
 
 class FeaturedProjects extends React.Component {

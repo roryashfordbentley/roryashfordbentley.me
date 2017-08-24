@@ -2,9 +2,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Fetch from 'whatwg-fetch';
 
 import ProjectHeader from '../project-single-header';
-
 import ProjectCoverImage from '../project-single-cover-image';
 import DetailImages from '../project-single-detail-images';
 import TechnicalOverview from '../project-single-technical-overview';

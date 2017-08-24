@@ -2,6 +2,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Fetch from 'whatwg-fetch';
+
 import ProjectsGridItem from '../projects-grid-item';
 import Carousel from 'nuka-carousel';
 import Slider from 'react-slick';
