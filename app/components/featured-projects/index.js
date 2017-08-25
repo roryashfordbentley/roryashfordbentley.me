@@ -2,7 +2,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ApiPrefix from '../../lib/api';
 import Fetch from 'whatwg-fetch';
+import Promise from 'promise-polyfill'; 
 
 import FeaturedProject from '../featured-project';
 
@@ -10,7 +12,7 @@ class FeaturedProjects extends React.Component {
 
     constructor(props) {
         super(props);
-        this.postListUrl = 'http://localhost/portfolio/wordpress/wp-json/wp/v2/pages/5', // homepage
+        this.postListUrl = ApiPrefix + 'pages/5', // homepage
         this.state = {
             featuredProjects: []
         }

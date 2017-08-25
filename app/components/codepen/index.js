@@ -5,10 +5,6 @@ import ReactDOM from 'react-dom';
 
 class ProjectsCodepen extends React.Component {
 
-    componentDidMount() {
-        console.log(this.props);
-    }
-
     render() {
         return (
             <div className="wrapper">

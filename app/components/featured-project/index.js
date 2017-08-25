@@ -2,7 +2,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ApiPrefix from '../../lib/api';
 import Fetch from 'whatwg-fetch';
+import Promise from 'promise-polyfill'; 
 import {
     BrowserRouter,
     Route,
@@ -13,7 +15,7 @@ class FeaturedProject extends React.Component {
 
     constructor(props) {
         super(props);
-        this.projectsUrl = 'http://localhost/portfolio/wordpress/wp-json/wp/v2/projects'
+        this.projectsUrl = ApiPrefix + 'projects'
         this.state = {
             title: '',
             taxonomy: '',
@@ -27,7 +29,7 @@ class FeaturedProject extends React.Component {
         fetch(url)
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
+            //console.log(data);
 
             this.setState({ 
                 title: data.title.rendered,

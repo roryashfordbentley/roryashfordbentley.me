@@ -2,7 +2,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ApiPrefix from '../../lib/api';
 import Fetch from 'whatwg-fetch';
+import Promise from 'promise-polyfill'; 
 
 import ProjectHeader from '../project-single-header';
 import ProjectCoverImage from '../project-single-cover-image';
@@ -15,7 +17,7 @@ class Projects extends React.Component {
     
     constructor(props) {
         super(props);
-        this.baseProjectsUrl = 'http://localhost/portfolio/wordpress/wp-json/wp/v2/projects/?slug=';
+        this.baseProjectsUrl = ApiPrefix + 'projects/?slug=';
         this.slug = this.props.match.params.ProjectSlug;
         this.state = {
             title: '',

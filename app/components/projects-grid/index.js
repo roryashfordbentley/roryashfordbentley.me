@@ -2,7 +2,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ApiPrefix from '../../lib/api';
 import Fetch from 'whatwg-fetch';
+import Promise from 'promise-polyfill'; 
 
 import ProjectsGridItem from '../projects-grid-item';
 import Carousel from 'nuka-carousel';
@@ -13,7 +15,7 @@ class ProjectsGrid extends React.Component {
 
     constructor(props) {
         super(props);
-        this.baseProjectsUrl = 'http://localhost/portfolio/wordpress/wp-json/wp/v2/projects?filter[taxonomy]=project_type&filter[term]=';
+        this.baseProjectsUrl = ApiPrefix + 'projects?filter[taxonomy]=project_type&filter[term]=';
         this.state = {
             data: []
         }
