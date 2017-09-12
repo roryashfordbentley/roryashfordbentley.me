@@ -1,0 +1,37 @@
+@import "assets/scss/__base.scss";
+@import "assets/scss/__colours.scss";
+
+@import "assets/scss/tools/_breakpoints.scss";
+//@import "assets/scss/tools/_gridtacular.scss";
+@import "assets/scss/tools/_rem.scss";
+@import "assets/scss/tools/_aspect-ratios.scss";
+
+// Global rules
+@import "assets/scss/globals/_reset.scss";
+@import "assets/scss/globals/_html-body.scss";
+@import "assets/scss/globals/_typography.scss";
+//@import "assets/scss/globals/_grid-setup.scss";
+@import "assets/scss/globals/_imgs.scss";
+@import "assets/scss/globals/_wrappers.scss";
+
+// Components
+@import "components/button/_index.scss";
+@import "components/header/_index.scss";
+@import "components/hamburger/_index.scss";
+@import "components/nav/_index.scss";
+@import "components/home-intro/_index.scss";
+@import "components/featured-projects/_index.scss";
+@import "components/featured-project/_index.scss";
+@import "components/projects-grid/_index.scss";
+@import "components/projects-grid-item/_index.scss";
+@import "components/project-single/_index.scss";
+@import "components/project-single-header/_index.scss";
+@import "components/project-single-cover-image/_index.scss";
+@import "components/project-single-detail-images/_index.scss";
+@import "components/project-single-technical-overview/_index.scss";
+@import "components/project-single-description/_index.scss";
+@import "components/icons/_index.scss"; // basic styling for ALL icons
+@import "components/button-group-prev-next/_index.scss";
+@import "components/slider/_index.scss";
+@import "components/about/_index.scss";
+@import "components/preloader/_index.scss";

@@ -1,0 +1,112 @@
+////
+// Typography
+////
+
+////
+// Font size mixins
+////
+
+@mixin fs1(){ 
+    font-size: rem(12);
+    @include bp($m){ font-size: rem(14); }
+    @include bp($l){ font-size: rem(16); }
+    @include bp($xl){ font-size: rem(18); }
+}
+
+@mixin fs2(){ 
+    font-size: rem(16);
+    @include bp($m){ font-size: rem(18); }
+    @include bp($l){ font-size: rem(24); }
+    @include bp($xl){ font-size: rem(28); }
+}
+
+@mixin fs3(){ 
+    font-size: rem(18);
+    @include bp($m){ font-size: rem(24); }
+    @include bp($l){ font-size: rem(28); }
+    @include bp($xl){ font-size: rem(32); }
+}
+
+@mixin fs4(){ 
+    font-size: rem(20);
+    @include bp($m){ font-size: rem(30); }
+    @include bp($l){ font-size: rem(36); }
+    @include bp($xl){ font-size: rem(42); }
+}
+
+@mixin fs5(){ 
+    font-size: rem(32);
+    @include bp($m){ font-size: rem(38); }
+    @include bp($l){ font-size: rem(42); }
+    @include bp($xl){ font-size: rem(48); }
+}
+
+@mixin fs6(){ 
+    font-size: rem(36);
+    @include bp($m){ font-size: rem(48); }
+    @include bp($l){ font-size: rem(56); }
+    @include bp($xl){ font-size: rem(60); }
+}
+
+// shared type styles for common elements
+p,
+ul,
+ol,
+input, 
+textarea{
+    font-weight: 400;
+    margin-bottom: rem(24);
+
+    &:last-child{
+        margin-bottom:0;
+    }
+}
+
+// Links
+a {
+    position: relative;
+    color: $clr_grey_4;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+}
+
+a:hover{
+    color: #000;
+}
+
+// paragraph link underlines
+p a:hover{
+    &:after{
+        position: absolute;
+        content:'';
+        left: 0;
+        right: 0;
+        bottom: 18%;
+        height: rem(1);
+        background: black;
+    }
+}
+
+// Headings
+h1,h2,h3,h4,h5,h6{
+    font-family: $heading_font;
+    font-weight: 500;
+}
+
+h1{ 
+    font-size: rem(60);
+}
+
+h2{ 
+    font-size: rem(50);
+}
+
+h3{ 
+    font-size: rem(40);
+}
+
+// Lists
+ul,ol {    
+    margin-left: rem(12);
+}

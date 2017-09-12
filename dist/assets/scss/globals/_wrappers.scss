@@ -1,0 +1,13 @@
+////
+// Wrapper
+////
+
+// Wrapper class is used to set a block of content
+// to a specified width and max-width
+.wrapper {
+    margin: 0 auto;
+    width: 90%;
+    @include bp($l){ 
+        max-width: 1400px; 
+    }
+}

@@ -1,0 +1,19 @@
+.technical-overview{
+    margin: rem(40) 0;
+    @include bp($m){
+        max-width: 75%;
+        margin: rem(80) 0;
+    }
+}
+
+.technical-overview__title{
+    @include fs4();
+    margin-bottom: rem(24);
+    @include bp($m){
+        margin-bottom: rem(48);
+    }
+}
+
+.technical-overview__text{
+    @include fs1();
+}

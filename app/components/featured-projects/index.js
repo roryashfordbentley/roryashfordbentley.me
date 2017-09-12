@@ -32,7 +32,7 @@ class FeaturedProjects extends React.Component {
     }
 
     componentWillMount() {
-        this.getListOfProjects(this.postListUrl);
+        //this.getListOfProjects(this.postListUrl);
     }
 
     render() {

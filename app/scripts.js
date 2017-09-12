@@ -2,43 +2,31 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-    BrowserRouter,
-    Route,
-    Link
-} from 'react-router-dom';
-
-const app = document.querySelector("#app");
-
-/**
- * Components
- */
+import ReactDOMServer from 'react-dom/server';
+import { Route } from 'react-router-dom';
 
 import Header from './components/header';
 import Home from './components/home';
 import Projects from './components/projects';
 import About from './components/about';
 import Contact from './components/contact';
-import FeaturedProjects from './components/featured-projects';
-import ProjectSingle from './components/project-single';
+import FourOhFour from './components/404';
 
 class App extends React.Component{
     render(){
         return (
             <div className="container">
-                <Header />
-                <Route exact path="/" component={Home} />
-                <Route path="/projects" component={Projects} />
-                <Route exact path="/about" component={About} />
-                <Route exact path="/contact" component={Contact} />
+                hello world
             </div>
         );
     }
 }
 
-ReactDOM.render(
+export default App;
+
+/*ReactDOM.render(
     <BrowserRouter basename="/portfolio/app">
         <App />
     </BrowserRouter>,
-    app
-);
+    PortfolioApp
+);*/

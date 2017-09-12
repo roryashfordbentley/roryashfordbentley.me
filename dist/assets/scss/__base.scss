@@ -1,0 +1,34 @@
+////
+// Base
+// Variables and setup
+// 
+////
+
+////
+// Media Queries
+////
+
+$s: null null;
+
+$m: 800px null;
+$l: 1100px null;
+$xl: 1400px null;
+
+$font_size:             62.5%;
+$line-height:           1.5;
+
+////
+// Font Weights
+////
+
+$light:                 300;
+$medium:                400;
+$semibold:              600;
+$bold:                  700;
+
+////
+// Font families
+////
+
+$heading_font:          "Work Sans", Helvetica, Arial, sans-serif;
+$body_font:             $heading_font;

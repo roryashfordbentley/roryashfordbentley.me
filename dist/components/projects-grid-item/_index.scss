@@ -1,0 +1,23 @@
+.project-preview{
+    display: block;
+    height: 100%;
+
+}
+
+.project-preview__link{
+    position: relative;
+}
+
+.project-preview__img{
+    display: block;
+    position:relative;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    margin-bottom: rem(24);
+}
+
+.project-preview__title{
+    @include fs2();
+    a{
+        color: $clr_grey_5;
+    }
+}

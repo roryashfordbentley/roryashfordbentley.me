@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-479 61 1994.86 632.861">
+  <defs>
+    <style>.stripe { fill: #d5fde7; }</style>
+  </defs>
+  <g transform="translate(-37 -143)">
+    <rect id="Rectangle_11" class="stripe" width="243" height="652" transform="translate(468.034 204) rotate(45)"/>
+    <rect id="Rectangle_14" class="stripe" width="243" height="652" transform="translate(19.034 204) rotate(45)"/>
+    <rect id="Rectangle_12" class="stripe" width="243" height="652" transform="translate(925.034 204) rotate(45)"/>
+    <rect id="Rectangle_13" class="stripe" width="243" height="652" transform="translate(1381.034 204) rotate(45)"/>
+  </g>
+</svg>

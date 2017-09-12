@@ -26,7 +26,7 @@ class HomeIntro extends React.Component {
     }
 
     componentWillMount() {
-        this.getApiData(this.url);
+        //this.getApiData(this.url);
     }
 
     render() {

@@ -1,0 +1,15 @@
+.home-intro{
+    padding: rem(24) rem(24);
+    @include bp($m){
+        padding: rem(96) rem(48);
+    }
+
+    @include bp($l){
+        max-width: 75%;
+    }
+}
+
+.home-intro__text p{
+    @include fs5();
+    font-weight: 400;
+}

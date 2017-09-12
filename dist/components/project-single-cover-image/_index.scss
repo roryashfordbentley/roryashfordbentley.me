@@ -1,0 +1,19 @@
+.project-cover{
+    background: $clr_light_grey;
+    padding: rem(42) 0;
+    
+    @include bp($m){
+        padding: rem(64) 0;
+    }
+
+    @include bp($l){
+        padding: rem(128) 0;
+    }
+}
+
+.project-cover__img{
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    max-width: 75%;
+}

@@ -36,7 +36,7 @@ class Header extends React.Component {
     render() {
         return (
             <header className="site-header">
-                <h1 className={this.state.menuToggle === "open" ? "logo logo--alt" : "logo"}><Link to="/">Rory Ashford</Link></h1>
+                <h1 className={this.state.menuToggle === "open" ? "logo logo--alt" : "logo"}>Rory Ashford</h1>
                 <Hamburger onClick={this.toggleMenu} toggle={this.state.menuToggle} />
                 <Nav onClick={this.toggleMenu} toggle={this.state.menuToggle} />
             </header>

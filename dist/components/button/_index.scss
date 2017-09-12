@@ -1,0 +1,49 @@
+.btn{
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+    background-color: $clr_text;
+    color: white;
+    font-size: rem(20);
+    font-weight: 500;
+    padding: rem(3) rem(12);
+    border: none;
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+    border-radius: rem(200);
+
+    @include fs1();
+
+    @include bp($m){
+        padding: rem(8) rem(16);
+    }
+
+    &:focus{
+        box-shadow: none;
+    }
+
+    &:hover{
+        background-color: black;
+        color: white;
+    }
+}
+
+
+// btn with icon
+.btn .icon{
+    height: rem(10);
+    padding-left: rem(10);
+    margin-top: -2%;
+    @include bp($m){
+        height: rem(14);
+    }
+
+    @include bp($l){
+        height: rem(16); 
+    }
+}
+
+.btn .icon__path{
+    stroke: white;
+}

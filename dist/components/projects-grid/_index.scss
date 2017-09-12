@@ -1,0 +1,33 @@
+.projects-grid{
+    
+}
+
+.project-grid__header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(48);
+    padding: rem(42) rem(24) 0 rem(24);
+    
+    @include bp($m){
+        padding: rem(64) rem(48) 0 rem(48);
+    }
+
+    @include bp($l){
+        padding: rem(80) rem(48) 0 rem(48);
+    }
+}
+
+.projects-grid--work{
+    background: $clr_grey_1;
+}
+
+.projects-grid--open-source{
+    background: $clr_grey_2;
+}
+.projects-grid--experiment{
+    background: $clr_grey_3;
+}
+
+.projects-grid__title{
+    @include fs4();
+}

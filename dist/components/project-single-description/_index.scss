@@ -1,0 +1,24 @@
+.project-single{}
+
+.project-single__description{
+    @include fs4();
+    margin: rem(72) 0;
+    
+    @include bp($m){
+        max-width: 75%;
+        margin: rem(120) 0;
+    }
+}
+
+.project-single__detail-img{
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    width: 100%; // Temp Fix: Image sizes need to be increased
+    margin-bottom: rem(24);
+    @include bp($m){
+        margin: 0;
+    }
+}
+
+.project-single__subtitle{
+    @include fs4();
+}
