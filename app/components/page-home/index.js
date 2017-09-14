@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import ApiPrefix from '../../lib/api';
 import HomeIntro from '../home-intro';
 import FeaturedProjects from '../featured-projects';
+import Preloader from '../preloader';
 
 class Home extends React.Component {
 
@@ -13,28 +14,54 @@ class Home extends React.Component {
         super(props);
         this.introTextUrl = ApiPrefix + 'pages/5'
         this.state = {
-            introText: ''
+            loaded: false,
+            introText: '',
+            featuredProjects: []
         }
     }
 
-    getIntroText(url){
-        fetch(url)
+    getApiData(url){
+        return fetch(url)
         .then((response) => response.json())
-        .then((data) => this.setState({ introText: data.content.rendered }))
+        //.then((data) => this.setState({ introText: data.content.rendered }))
+        //.then(data => Promise.resolve(data))
         .catch(function(err) {
             console.log(err);
         });
     }
 
-    componentWillMount() {
-        this.getIntroText(this.introTextUrl);
+    getListOfProjects(url) {
+        return fetch(url)
+        .then((response) => response.json())
+        //.then((data) => this.setState({ featuredProjects: data.acf.featured_projects }))
+        //.then(data => Promise.resolve(data))
+        .catch(function(err) {
+            console.log(err);
+        });
+    }
+
+
+    componentDidMount() {
+        let getData = this.getApiData(this.introTextUrl);
+        //let projects = this.getListOfProjects(this.introTextUrl);
+        //console.log(Promise.resolve(intro));
+        getData.then(data => { 
+            console.log(data);
+            this.setState({ featuredProjects: data.acf.featured_projects });
+            this.setState({ introText: data.content.rendered });
+            setTimeout(function(){
+                this.setState({ loaded: true })
+            }.bind(this),3000);
+            
+        });
     }
 
     render(){
-        return (
+        return ( 
             <div className="container">
+                <Preloader loaded={this.state.loaded} />
                 <HomeIntro text={this.state.introText} />
-                <FeaturedProjects />
+                <FeaturedProjects projects={this.state.featuredProjects} />
             </div>
         );
     }

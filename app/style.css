@@ -26,6 +26,10 @@ body {
   color: #2A2C2E;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 p,
 ul,
 ol,
@@ -1356,25 +1360,35 @@ a img {
 }
 
 .preloader {
-  background: black;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #dcdcdc;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 999;
+  opacity: 1;
+}
+
+.preloader--closed {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
 }
 
 .loading-animation {
-  width: 12rem;
+  width: 18rem;
 }
 
 .loading-animation__path {
-  stroke: white;
-  stroke-width: 2;
+  stroke: #6A6A6A;
+  stroke-width: 1;
   fill: none;
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-  animation: stroke 2s linear infinite;
+  animation: stroke 3s linear infinite;
 }
 
 @keyframes stroke {
