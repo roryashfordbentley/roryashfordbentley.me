@@ -2,10 +2,6 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from '../home';
-import Projects from '../projects';
-import About from '../about';
-import Contact from '../contact';
 import {
   BrowserRouter as Router,
   Route,

@@ -4,7 +4,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ApiPrefix from '../../lib/api';
 import Fetch from 'whatwg-fetch';
-import Promise from 'promise-polyfill'; 
 
 import ProjectsGridItem from '../projects-grid-item';
 import Carousel from 'nuka-carousel';

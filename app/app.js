@@ -15,10 +15,10 @@ const app = document.querySelector("#app");
  */
 
 import Header from './components/header';
-import Home from './components/home';
-import Projects from './components/projects';
-import About from './components/about';
-import Contact from './components/contact';
+import Home from './components/page-home';
+import Projects from './components/page-projects';
+import About from './components/page-about';
+import Contact from './components/page-contact';
 import FeaturedProjects from './components/featured-projects';
 import ProjectSingle from './components/project-single';
 

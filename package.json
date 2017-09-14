@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "sass": "node-sass app/style.scss app/style.css --output-style expanded",
-    "browserify": "browserify app/scripts.js -t [ babelify --presets [ react ] ] -o app/scripts.min.js",
+    "browserify": "browserify app/app.js -t [ babelify --presets [ react ] ] -o app/app.min.js",
     "watch:sass": "fsmonitor -d app/ -q '+*.scss' '!app/style.scss' npm run -s sass",
-    "watch:js": "fsmonitor -d app/ -q '+*.js' '!scripts.min.js' npm run browserify",
-    "browsersync": "browser-sync start --files 'app/*, !app/**/*.scss, !app/scripts.js, !.git/*, app/**/*' --no-open --proxy localhost/portfolio",
+    "watch:js": "fsmonitor -d app/ -q '+*.js' '!app.min.js' npm run browserify",
+    "browsersync": "browser-sync start --files 'app/*, !app/**/*.scss, !app/app.js, !.git/*, app/**/*' --no-open --proxy localhost/portfolio",
     "watch": "npm run -s watch:sass & npm run -s watch:js & npm run browsersync"
   },
   "dependencies": {
@@ -17,9 +17,9 @@
     "browserify": "^13.1.0",
     "fsmonitor": "^0.2.4",
     "node-sass": "^3.10.1",
-    "nuka-carousel": "^2.2.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-preload": "^0.5.1",
     "react-router": "^2.8.1",
     "react-router-dom": "^4.1.2",
     "react-slick": "^0.14.11",
