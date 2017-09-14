@@ -10,6 +10,14 @@ import {
 
 class Navigation extends React.Component {
 
+    componentDidUpdate() {
+        if(this.props.toggle === 'open'){
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+    }
+
     render() {
         return (
             <nav className={this.props.toggle === "open" ? "nav nav--open" : "nav"}>

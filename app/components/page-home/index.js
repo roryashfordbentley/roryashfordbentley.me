@@ -23,8 +23,6 @@ class Home extends React.Component {
     getApiData(url){
         return fetch(url)
         .then((response) => response.json())
-        //.then((data) => this.setState({ introText: data.content.rendered }))
-        //.then(data => Promise.resolve(data))
         .catch(function(err) {
             console.log(err);
         });
@@ -32,8 +30,6 @@ class Home extends React.Component {
 
     componentDidMount() {
         let getData = this.getApiData(this.introTextUrl);
-        //let projects = this.getListOfProjects(this.introTextUrl);
-        //console.log(Promise.resolve(intro));
         getData.then(data => { 
             console.log(data);
             this.setState({ featuredProjects: data.acf.featured_projects });

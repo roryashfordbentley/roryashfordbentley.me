@@ -1365,7 +1365,7 @@ a img {
   right: 0;
   bottom: 0;
   left: 0;
-  background: #e8e8e8;
+  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1383,7 +1383,7 @@ a img {
 }
 
 .loading-animation__path {
-  stroke: #6A6A6A;
+  stroke: #e8e8e8;
   stroke-width: 1.5;
   fill: none;
   stroke-dasharray: 500;

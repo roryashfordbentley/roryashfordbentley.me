@@ -4,7 +4,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: $clr_grey_2;
+    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,7 @@
 }
 
 .loading-animation__path{
-    stroke: $clr_grey_4;
+    stroke: $clr_grey_2;
     stroke-width: 1.5;
     fill: none;
     stroke-dasharray: 500;
