@@ -1365,7 +1365,7 @@ a img {
   right: 0;
   bottom: 0;
   left: 0;
-  background: #dcdcdc;
+  background: #e8e8e8;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1379,12 +1379,12 @@ a img {
 }
 
 .loading-animation {
-  width: 18rem;
+  width: 15rem;
 }
 
 .loading-animation__path {
   stroke: #6A6A6A;
-  stroke-width: 1;
+  stroke-width: 1.5;
   fill: none;
   stroke-dasharray: 500;
   stroke-dashoffset: 500;

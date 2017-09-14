@@ -30,17 +30,6 @@ class Home extends React.Component {
         });
     }
 
-    getListOfProjects(url) {
-        return fetch(url)
-        .then((response) => response.json())
-        //.then((data) => this.setState({ featuredProjects: data.acf.featured_projects }))
-        //.then(data => Promise.resolve(data))
-        .catch(function(err) {
-            console.log(err);
-        });
-    }
-
-
     componentDidMount() {
         let getData = this.getApiData(this.introTextUrl);
         //let projects = this.getListOfProjects(this.introTextUrl);
