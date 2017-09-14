@@ -3,11 +3,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Header from '../header';
+
 class About extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
+                <Header />
                 <section className="about-header">
                     <div className="about-header__text">
                         <h1 className="about-header__title">About</h1>

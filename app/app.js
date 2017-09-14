@@ -26,7 +26,6 @@ class App extends React.Component{
     render(){
         return (
             <div className="container">
-                <Header />
                 <Route exact path="/" component={Home} />
                 <Route path="/projects" component={Projects} />
                 <Route exact path="/about" component={About} />

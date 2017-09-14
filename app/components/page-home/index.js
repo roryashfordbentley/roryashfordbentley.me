@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import ApiPrefix from '../../lib/api';
+import Header from '../header';
 import HomeIntro from '../home-intro';
 import FeaturedProjects from '../featured-projects';
 import Preloader from '../preloader';
@@ -44,6 +45,7 @@ class Home extends React.Component {
     render(){
         return ( 
             <div className="container">
+                <Header />
                 <Preloader loaded={this.state.loaded} />
                 <HomeIntro text={this.state.introText} />
                 <FeaturedProjects projects={this.state.featuredProjects} />

@@ -8,6 +8,8 @@ import {
     Route,
     Link
 } from 'react-router-dom';
+
+import Header from '../header';
 import ProjectsDisplay from '../projects-display';
 import ProjectSingle from '../project-single';
 
@@ -15,7 +17,8 @@ import ProjectSingle from '../project-single';
 class Projects extends React.Component {
     render() {
         return (
-            <div>
+            <div className="container">
+                <Header />
                 <Route exact path={'/projects'} component={ProjectsDisplay}/>
                 <Route path={'/projects/:ProjectSlug'} component={ProjectSingle}/>
             </div>
