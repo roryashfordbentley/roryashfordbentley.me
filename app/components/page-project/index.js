@@ -2,8 +2,16 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import {
+    BrowserRouter,
+    Route,
+    Link
+} from 'react-router-dom';
+
 import ApiPrefix from '../../lib/api';
-import Fetch from 'whatwg-fetch';
+import ProjectsSlider from '../projects-slider';
+import Header from '../header';
 
 import ProjectHeader from '../project-single-header';
 import ProjectCoverImage from '../project-single-cover-image';
@@ -12,8 +20,8 @@ import TechnicalOverview from '../project-single-technical-overview';
 import ProjectDescription from '../project-single-description';
 import Codepen from '../codepen';
 
-class Projects extends React.Component {
-    
+class Project extends React.Component {
+
     constructor(props) {
         super(props);
         this.baseProjectsUrl = ApiPrefix + 'projects/?slug=';
@@ -27,7 +35,8 @@ class Projects extends React.Component {
             coverImg: '',
             detailImg1: '',
             detailImg2: '',
-            codepen: ''
+            codepen: '',
+            loaded: false
         }
     }
 
@@ -36,8 +45,6 @@ class Projects extends React.Component {
         fetch(url + slug + '&_embed')
         .then((response) => response.json())
         .then((data) => {
-
-            console.log(data[0].acf.codepen_embed);
 
             this.setState({ 
                 title: data[0].title.rendered,
@@ -50,6 +57,11 @@ class Projects extends React.Component {
                 detailImg2: data[0].acf.detail_image_2 ? data[0].acf.detail_image_2.sizes.landscape_large : '',
                 codepen: data[0].acf.codepen_embed
             });
+
+            setTimeout(function(){
+                this.setState({ loaded: true })
+            }.bind(this),3000);
+            
         }).catch(function(err) {
             console.log(err);
         });
@@ -61,17 +73,23 @@ class Projects extends React.Component {
 
     render() {
         return (
-            <section className="project-single">
-                <ProjectHeader taxonomy={this.state.taxonomy} title={this.state.title} link={this.state.url} />
-                <ProjectCoverImage img={this.state.coverImg} />
-                <ProjectDescription text={this.state.content} />
-                <Codepen code={this.state.codepen} />
-                <DetailImages img1={this.state.detailImg1} img2={this.state.detailImg2} />
-                <TechnicalOverview text={this.state.technicalOverview} />
-            </section>
-
+            <div className="container">
+                <Header loaded={this.state.loaded} />
+                <Route exact path={'/projects/:ProjectSlug'} 
+                    render={ () => 
+                        <section className="project-single">
+                            <ProjectHeader taxonomy={this.state.taxonomy} title={this.state.title} link={this.state.url} />
+                            <ProjectCoverImage img={this.state.coverImg} />
+                            <ProjectDescription text={this.state.content} />
+                            <Codepen code={this.state.codepen} />
+                            <DetailImages img1={this.state.detailImg1} img2={this.state.detailImg2} />
+                            <TechnicalOverview text={this.state.technicalOverview} />
+                        </section>
+                    }
+                />
+            </div>
         );
     }
 }
 
-export default Projects;
+export default Project;

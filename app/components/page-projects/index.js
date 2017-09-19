@@ -63,7 +63,7 @@ class Projects extends React.Component {
         return (
             <div className="container">
                 <Header loaded={this.state.loaded} />
-                <Route path={'/projects'} 
+                <Route exact path={'/projects'} 
                     render={ () => 
                         <div>
                             <ProjectsSlider data={this.state.work} title="Work" />
@@ -72,7 +72,6 @@ class Projects extends React.Component {
                         </div>
                     }
                 />
-                <Route path={'/projects/:ProjectSlug'} component={ProjectSingle}/>
             </div>
         );
     }
