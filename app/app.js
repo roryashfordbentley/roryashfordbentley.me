@@ -18,6 +18,18 @@ import Contact from './components/page-contact';
 import FeaturedProjects from './components/featured-projects';
 import ProjectSingle from './components/project-single';
 
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('serviceworker.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+}
+
 class App extends React.Component{
     render(){
         return (
