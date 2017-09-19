@@ -4,18 +4,38 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999; // 1 less than the nav bar
     opacity: 1;
+    visibility: visible;
+    overflow: hidden;
 }
 
 .preloader--closed{
     opacity: 0;
-    transition: opacity 0.5s ease-out;
+    visibility: hidden;
+    transition: visibility 0s 2s, opacity 1.5s ease-in;
 }
+
+.preloader__bg{
+    background: $clr_black;
+    position: absolute;
+    top: rem(45);
+    right: rem(43);
+    z-index:-1;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: scale(100,100);
+}
+
+.preloader__bg--closed{
+    transform: scale(1,1);
+    transition: transform 1s, background 2s ease-out;
+}
+
 
 .loading-animation{
     width: rem(150);

@@ -2,43 +2,41 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hamburger from '../hamburger';
-import Nav from '../nav';
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom';
 
+import Preloader from '../preloader';
+import Hamburger from '../hamburger';
+import Nav from '../nav';
+
 class Header extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = { 
-            menuToggle: 'closed'
+            menuToggle: false
         };
-
         this.toggleMenu = this.toggleMenu.bind(this);
     }
 
     toggleMenu() {
-        if(this.state.menuToggle === 'closed'){
-            this.setState({ menuToggle: 'open' });
+        if(this.state.menuToggle === false){
+            this.setState({ menuToggle: true });
         } else {
-            this.setState({ menuToggle: 'closed' });
+            this.setState({ menuToggle: false });
         }
-    }
-
-    componentDidUpdate(){
-        console.log(this.state);
     }
 
     render() {
         return (
             <header className="site-header">
-                <h1 className={this.state.menuToggle === "open" ? "logo logo--alt" : "logo"}><Link to="/">Rory Ashford</Link></h1>
-                <Hamburger onClick={this.toggleMenu} toggle={this.state.menuToggle} />
+                <h1 className={this.state.menuToggle === true || this.props.loaded === false ? "logo logo--alt" : "logo"}><Link to="/">Rory Ashford-Bentley</Link></h1>
+                <Hamburger onClick={this.toggleMenu} toggle={this.state.menuToggle} loaded={this.props.loaded} />
                 <Nav onClick={this.toggleMenu} toggle={this.state.menuToggle} />
+                <Preloader loaded={this.props.loaded} />
             </header>
         );
     }

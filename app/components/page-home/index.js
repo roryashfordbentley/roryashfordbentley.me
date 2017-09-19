@@ -7,7 +7,6 @@ import ApiPrefix from '../../lib/api';
 import Header from '../header';
 import HomeIntro from '../home-intro';
 import FeaturedProjects from '../featured-projects';
-import Preloader from '../preloader';
 
 class Home extends React.Component {
 
@@ -32,7 +31,6 @@ class Home extends React.Component {
     componentDidMount() {
         let getData = this.getApiData(this.introTextUrl);
         getData.then(data => { 
-            console.log(data);
             this.setState({ featuredProjects: data.acf.featured_projects });
             this.setState({ introText: data.content.rendered });
             setTimeout(function(){
@@ -45,8 +43,7 @@ class Home extends React.Component {
     render(){
         return ( 
             <div className="container">
-                <Header />
-                <Preloader loaded={this.state.loaded} />
+                <Header loaded={this.state.loaded} />
                 <HomeIntro text={this.state.introText} />
                 <FeaturedProjects projects={this.state.featuredProjects} />
             </div>

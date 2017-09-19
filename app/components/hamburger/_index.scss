@@ -49,19 +49,21 @@
     .hamburger__line--1{
         transform: rotate(45deg);
         transition: transform 0.5s;
-        stroke: white;
     }
 
      .hamburger__line--2{
         opacity: 0;
         transition: opacity .125s;
-        stroke: white;
     }
 
     .hamburger__line--3{
         transform: rotate(-45deg);
         transition: transform 0.5s;
-        stroke: white;
     }
 }
 
+.hamburger--alt{
+    .hamburger__line{
+        stroke: white;
+    }
+}

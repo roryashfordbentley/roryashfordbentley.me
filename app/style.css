@@ -280,18 +280,19 @@ a img {
 .hamburger--open .hamburger__line--1 {
   transform: rotate(45deg);
   transition: transform 0.5s;
-  stroke: white;
 }
 
 .hamburger--open .hamburger__line--2 {
   opacity: 0;
   transition: opacity .125s;
-  stroke: white;
 }
 
 .hamburger--open .hamburger__line--3 {
   transform: rotate(-45deg);
   transition: transform 0.5s;
+}
+
+.hamburger--alt .hamburger__line {
   stroke: white;
 }
 
@@ -1365,17 +1366,36 @@ a img {
   right: 0;
   bottom: 0;
   left: 0;
-  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
   opacity: 1;
+  visibility: visible;
+  overflow: hidden;
 }
 
 .preloader--closed {
   opacity: 0;
-  transition: opacity 0.5s ease-out;
+  visibility: hidden;
+  transition: visibility 0s 2s, opacity 1.5s ease-in;
+}
+
+.preloader__bg {
+  background: #000000;
+  position: absolute;
+  top: 4.5rem;
+  right: 4.3rem;
+  z-index: -1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transform: scale(100, 100);
+}
+
+.preloader__bg--closed {
+  transform: scale(1, 1);
+  transition: transform 1s, background 2s ease-out;
 }
 
 .loading-animation {
