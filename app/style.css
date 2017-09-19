@@ -323,11 +323,11 @@ a img {
 
 .nav__bg {
   position: absolute;
-  top: 2.4rem;
-  right: 2rem;
+  top: 2.8rem;
+  right: 2.2rem;
   z-index: -1;
-  width: 50px;
-  height: 50px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   transform: scale(1, 1);
   transition: transform 1s, background 2s ease-out;
@@ -335,6 +335,8 @@ a img {
 
 @media (min-width: 800px) {
   .nav__bg {
+    width: 5rem;
+    height: 5rem;
     top: 4.4rem;
     right: 4.4rem;
   }
@@ -348,7 +350,7 @@ a img {
 
 .nav__list {
   text-align: center;
-  width: 400px;
+  width: 40rem;
   list-style: none;
   opacity: 0;
   transition: opacity 0.25s ease-in;
@@ -1385,13 +1387,22 @@ a img {
 .preloader__bg {
   background: #000000;
   position: absolute;
-  top: 4.5rem;
-  right: 4.3rem;
+  top: 2.8rem;
+  right: 2.2rem;
   z-index: -1;
-  width: 50px;
-  height: 50px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   transform: scale(100, 100);
+}
+
+@media (min-width: 800px) {
+  .preloader__bg {
+    width: 5rem;
+    height: 5rem;
+    top: 4.4rem;
+    right: 4.4rem;
+  }
 }
 
 .preloader__bg--closed {

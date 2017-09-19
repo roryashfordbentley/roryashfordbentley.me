@@ -22,13 +22,19 @@
 .preloader__bg{
     background: $clr_black;
     position: absolute;
-    top: rem(45);
-    right: rem(43);
+    top: rem(28);
+    right: rem(22);
     z-index:-1;
-    width: 50px;
-    height: 50px;
+    width: rem(25);
+    height: rem(25);
     border-radius: 50%;
     transform: scale(100,100);
+    @include bp($m){
+        width: rem(50);
+        height: rem(50);
+        top: rem(44);
+        right: rem(44);
+    }
 }
 
 .preloader__bg--closed{
