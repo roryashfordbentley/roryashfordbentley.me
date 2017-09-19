@@ -1,7 +1,7 @@
 'use strict';
 
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'preact-compat';
+import ReactDOM from 'preact-compat';
 import Button from '../button';
 import RightArrow from '../icons/right-arrow';
 import {
