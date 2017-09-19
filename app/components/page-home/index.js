@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 
 import ApiPrefix from '../../lib/api';
 import Header from '../header';
+import Footer from '../footer';
 import HomeIntro from '../home-intro';
 import FeaturedProjects from '../featured-projects';
 
@@ -46,6 +47,7 @@ class Home extends React.Component {
                 <Header loaded={this.state.loaded} />
                 <HomeIntro text={this.state.introText} />
                 <FeaturedProjects projects={this.state.featuredProjects} />
+                <Footer />
             </div>
         );
     }
