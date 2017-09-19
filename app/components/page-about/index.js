@@ -7,10 +7,21 @@ import Header from '../header';
 
 class About extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = { loaded: false }
+    }
+
+    componentDidMount() {
+        setTimeout(function(){
+            this.setState({ loaded: true })
+        }.bind(this),2000); 
+    }
+
     render() {
         return (
             <div className="container">
-                <Header />
+                <Header loaded={this.state.loaded} />
                 <section className="about-header">
                     <div className="about-header__text">
                         <h1 className="about-header__title">About</h1>
