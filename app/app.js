@@ -10,10 +10,6 @@ import {
 
 const app = document.querySelector("#app");
 
-/**
- * Components
- */
-
 import Header from './components/header';
 import Home from './components/page-home';
 import Projects from './components/page-projects';
