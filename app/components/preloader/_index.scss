@@ -45,6 +45,12 @@
 
 .loading-animation{
     width: rem(150);
+    opacity: 1;
+}
+
+.loading-animation--closed{
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .loading-animation__path{
