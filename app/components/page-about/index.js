@@ -15,7 +15,7 @@ class About extends React.Component {
     componentDidMount() {
         setTimeout(function(){
             this.setState({ loaded: true })
-        }.bind(this),2000); 
+        }.bind(this),1000); 
     }
 
     render() {

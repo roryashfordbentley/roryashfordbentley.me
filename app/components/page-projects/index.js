@@ -55,7 +55,7 @@ class Projects extends React.Component {
 
             setTimeout(function(){
                 this.setState({ loaded: true })
-            }.bind(this),3000);
+            }.bind(this),1000);
         });
     }
 

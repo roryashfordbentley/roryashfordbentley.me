@@ -1426,7 +1426,7 @@ a img {
   fill: none;
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-  animation: stroke 3s linear infinite;
+  animation: stroke 2s linear infinite;
 }
 
 @keyframes stroke {

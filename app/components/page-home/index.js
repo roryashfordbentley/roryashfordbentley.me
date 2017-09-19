@@ -35,7 +35,7 @@ class Home extends React.Component {
             this.setState({ introText: data.content.rendered });
             setTimeout(function(){
                 this.setState({ loaded: true })
-            }.bind(this),3000);
+            }.bind(this),1000);
             
         });
     }
