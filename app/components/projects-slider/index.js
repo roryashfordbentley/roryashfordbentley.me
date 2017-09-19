@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import ApiPrefix from '../../lib/api';
 import Fetch from 'whatwg-fetch';
 
-import ProjectsGridItem from '../projects-grid-item';
+import Slide from '../projects-slide';
 import Slider from 'react-slick';
 import ButtonGroupPrevNext from '../button-group-prev-next';
 
@@ -31,7 +31,7 @@ class ProjectsGrid extends React.Component {
 
             return (
                 <div key={index}>
-                    <ProjectsGridItem key={index} title={title} slug={slug} img={image} />
+                    <Slide key={index} title={title} slug={slug} img={image} />
                 </div>
             )
         });

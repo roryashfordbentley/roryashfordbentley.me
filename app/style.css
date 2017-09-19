@@ -231,6 +231,7 @@ a img {
   background: none;
   border: none;
   outline: none;
+  padding-top: 0.5rem;
   width: 2rem;
   height: 2rem;
 }
