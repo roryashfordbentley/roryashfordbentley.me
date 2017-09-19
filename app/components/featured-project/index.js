@@ -72,7 +72,7 @@ class FeaturedProject extends React.Component {
         return (
             <div className={this.aspectRatioGrid()}>
                 <Link to={'/projects/' + this.state.slug}>
-                    <img className="featured-project__img" src={this.state.img} />
+                    <img className="featured-project__img" src={this.state.img} alt={this.state.title + ' project image'} />
                 </Link>
                 <span className="featured-project__cat">{this.state.taxonomy}</span>
                 <Link to={'/projects/' + this.state.slug}>
