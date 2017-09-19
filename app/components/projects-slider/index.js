@@ -39,11 +39,6 @@ class ProjectsGrid extends React.Component {
         return items;
     }
 
-    componentDidUpdate() {
-        console.log(typeof this.props.data);
-        console.log(this.props.data);
-    }
-
     render() {
         var settings = {
             dots: false,

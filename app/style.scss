@@ -2,7 +2,6 @@
 @import "assets/scss/__colours.scss";
 
 @import "assets/scss/tools/_breakpoints.scss";
-//@import "assets/scss/tools/_gridtacular.scss";
 @import "assets/scss/tools/_rem.scss";
 @import "assets/scss/tools/_aspect-ratios.scss";
 
@@ -10,7 +9,6 @@
 @import "assets/scss/globals/_reset.scss";
 @import "assets/scss/globals/_html-body.scss";
 @import "assets/scss/globals/_typography.scss";
-//@import "assets/scss/globals/_grid-setup.scss";
 @import "assets/scss/globals/_imgs.scss";
 @import "assets/scss/globals/_wrappers.scss";
 
@@ -30,7 +28,7 @@
 @import "components/project-single-detail-images/_index.scss";
 @import "components/project-single-technical-overview/_index.scss";
 @import "components/project-single-description/_index.scss";
-@import "components/icons/_index.scss"; // basic styling for ALL icons
+@import "components/icons/_index.scss";
 @import "components/button-group-prev-next/_index.scss";
 @import "components/slider/_index.scss";
 @import "components/page-about/_index.scss";
