@@ -6,33 +6,10 @@ import ApiPrefix from '../../lib/api';
 import Fetch from 'whatwg-fetch';
 
 import ProjectsGridItem from '../projects-grid-item';
-import Carousel from 'nuka-carousel';
 import Slider from 'react-slick';
 import ButtonGroupPrevNext from '../button-group-prev-next';
 
 class ProjectsGrid extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.baseProjectsUrl = ApiPrefix + 'projects?filter[taxonomy]=project_type&filter[term]=';
-        this.state = {
-            data: []
-        }
-    }
-
-    getListOfProjects(url,taxonomyTerm) {
-        fetch(url + taxonomyTerm)
-        .then((response) => response.json())
-        .then((data) => {
-            this.setState({ data: data });
-        }).catch(function(err) {
-            console.log(err);
-        });
-    }
-
-    componentDidMount() {
-        this.getListOfProjects(this.baseProjectsUrl,this.props.term);
-    }
 
     prevClick(e) {
         e.preventDefault();
@@ -45,7 +22,9 @@ class ProjectsGrid extends React.Component {
     }
 
     outputItems(){
-        let items = this.state.data.map((project,index) => {
+        let items = Object.keys(this.props.data).map((key,index) => {
+            let project = this.props.data[key];
+            
             let title = project.title.rendered;
             let slug = project.slug;
             let image = project.acf.cover_image_landscape ? project.acf.cover_image_landscape.sizes.landscape_large : '';
@@ -58,6 +37,11 @@ class ProjectsGrid extends React.Component {
         });
 
         return items;
+    }
+
+    componentDidUpdate() {
+        console.log(typeof this.props.data);
+        console.log(this.props.data);
     }
 
     render() {
