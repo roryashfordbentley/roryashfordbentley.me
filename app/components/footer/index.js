@@ -6,23 +6,6 @@ import { Link } from 'react-router-dom';
 
 
 class Footer extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state = { 
-            menuToggle: false
-        };
-        this.toggleMenu = this.toggleMenu.bind(this);
-    }
-
-    toggleMenu() {
-        if(this.state.menuToggle === false){
-            this.setState({ menuToggle: true });
-        } else {
-            this.setState({ menuToggle: false });
-        }
-    }
-
     render() {
         return (
             <footer className="site-footer">

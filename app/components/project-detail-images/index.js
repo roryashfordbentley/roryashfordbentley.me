@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 class DetailImages extends React.Component {
 
@@ -22,5 +23,11 @@ class DetailImages extends React.Component {
         );
     }
 }
+
+DetailImages.propTypes = {
+    img1: PropTypes.string,
+    img2: PropTypes.string
+};
+
 
 export default DetailImages;

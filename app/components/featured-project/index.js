@@ -9,6 +9,7 @@ import {
     Route,
     Link
 } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class FeaturedProject extends React.Component {
 
@@ -82,5 +83,10 @@ class FeaturedProject extends React.Component {
         );
     }
 }
+
+FeaturedProject.propTypes = {
+    aspect: PropTypes.string,
+    id: PropTypes.number
+};
 
 export default FeaturedProject;

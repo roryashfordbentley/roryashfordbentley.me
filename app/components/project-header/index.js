@@ -9,6 +9,7 @@ import {
     Route,
     Link
 } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class ProjectHeader extends React.Component {
     render() {
@@ -31,5 +32,11 @@ class ProjectHeader extends React.Component {
         );
     }
 }
+
+ProjectHeader.propTypes = {
+    taxonomy: PropTypes.string,
+    title: PropTypes.string,
+    link: PropTypes.string
+};
 
 export default ProjectHeader;

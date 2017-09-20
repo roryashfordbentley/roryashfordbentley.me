@@ -7,6 +7,7 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Navigation extends React.Component {
 
@@ -38,5 +39,10 @@ class Navigation extends React.Component {
         );
     }
 }
+
+Navigation.propTypes = {
+    toggle: PropTypes.bool,
+    onClick: PropTypes.func
+};
 
 export default Navigation;

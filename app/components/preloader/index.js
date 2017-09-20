@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 class Preloader extends React.Component {
 
@@ -26,5 +27,9 @@ class Preloader extends React.Component {
         );
     }
 }
+
+Preloader.propTypes = {
+    loaded: PropTypes.bool,
+};
 
 export default Preloader ;

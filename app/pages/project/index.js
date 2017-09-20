@@ -13,11 +13,11 @@ import ApiPrefix from '../../lib/api';
 import ProjectsSlider from '../../components/projects-slider';
 import Header from '../../components/header';
 
-import ProjectHeader from '../../components/project-single-header';
-import ProjectCoverImage from '../../components/project-single-cover-image';
-import DetailImages from '../../components/project-single-detail-images';
-import TechnicalOverview from '../../components/project-single-technical-overview';
-import ProjectDescription from '../../components/project-single-description';
+import ProjectHeader from '../../components/project-header';
+import ProjectCoverImage from '../../components/project-cover-image';
+import DetailImages from '../../components/project-detail-images';
+import TechnicalOverview from '../../components/project-technical-overview';
+import ProjectDescription from '../../components/project-description';
 import Codepen from '../../components/codepen';
 
 class Project extends React.Component {

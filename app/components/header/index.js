@@ -7,6 +7,7 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import Preloader from '../preloader';
 import Hamburger from '../hamburger';
@@ -41,5 +42,9 @@ class Header extends React.Component {
         );
     }
 }
+
+Header.propTypes = {
+    loaded: PropTypes.bool
+};
 
 export default Header;

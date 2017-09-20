@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 class TechnicalOverview extends React.Component {
 
@@ -16,5 +17,9 @@ class TechnicalOverview extends React.Component {
         );
     }
 }
+
+TechnicalOverview.propTypes = {
+    text: PropTypes.string,
+};
 
 export default TechnicalOverview;

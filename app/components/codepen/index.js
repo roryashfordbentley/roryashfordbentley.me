@@ -2,8 +2,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
-class ProjectsCodepen extends React.Component {
+class Codepen extends React.Component {
 
     render() {
         return (
@@ -14,4 +15,8 @@ class ProjectsCodepen extends React.Component {
     }
 }
 
-export default ProjectsCodepen;
+Codepen.propTypes = {
+    code: PropTypes.string,
+};
+
+export default Codepen;

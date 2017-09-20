@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 class Hamburger extends React.Component {
     render() {
@@ -16,5 +17,10 @@ class Hamburger extends React.Component {
         );
     }
 }
+
+Hamburger.propTypes = {
+    onClick: PropTypes.func,
+    toggle: PropTypes.bool
+};
 
 export default Hamburger;

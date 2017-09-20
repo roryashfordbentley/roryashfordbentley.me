@@ -12,7 +12,6 @@ import {
 import ApiPrefix from '../../lib/api';
 import ProjectsSlider from '../../components/projects-slider';
 import Header from '../../components/header';
-import ProjectSingle from '../../components/project-single';
 
 class Projects extends React.Component {
 

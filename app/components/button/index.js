@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 class Button extends React.Component {
     render() {
@@ -12,5 +13,10 @@ class Button extends React.Component {
         );
     }
 }
+
+Button.propTypes = {
+    link: PropTypes.string,
+    children: PropTypes.node
+};
 
 export default Button;

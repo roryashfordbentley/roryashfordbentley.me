@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ApiPrefix from '../../lib/api';
 import Fetch from 'whatwg-fetch';
+import PropTypes from 'prop-types';
 
 import Slide from '../projects-slide';
 import Slider from 'react-slick';
@@ -66,5 +67,11 @@ class ProjectsGrid extends React.Component {
         );
     }
 }
+
+ProjectsGrid.propTypes = {
+    data: PropTypes.array,
+    term: PropTypes.string,
+    title: PropTypes.string,
+};
 
 export default ProjectsGrid;

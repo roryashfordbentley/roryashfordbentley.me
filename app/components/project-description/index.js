@@ -2,9 +2,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 class ProjectDescription extends React.Component {
-    
     render() {
         return (
             <div className="wrapper">
@@ -13,5 +13,10 @@ class ProjectDescription extends React.Component {
         );
     }
 }
+
+
+ProjectDescription.propTypes = {
+    text: PropTypes.string
+};
 
 export default ProjectDescription;

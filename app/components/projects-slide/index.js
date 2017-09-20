@@ -7,8 +7,9 @@ import {
     Route,
     Link
 } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-class ProjectsGridItem extends React.Component {
+class ProjectsSlide extends React.Component {
 
     render() {
         return (
@@ -24,4 +25,10 @@ class ProjectsGridItem extends React.Component {
     }
 }
 
-export default ProjectsGridItem;
+ProjectsSlide.propTypes = {
+    slug: PropTypes.string,
+    img: PropTypes.string,
+    title: PropTypes.string,
+};
+
+export default ProjectsSlide;

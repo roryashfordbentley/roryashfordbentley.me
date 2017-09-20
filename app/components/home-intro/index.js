@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 class HomeIntro extends React.Component {
     render() {
@@ -12,5 +13,9 @@ class HomeIntro extends React.Component {
         );
     }
 }
+
+HomeIntro.propTypes = {
+    text: PropTypes.string
+};
 
 export default HomeIntro;
