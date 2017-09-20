@@ -608,6 +608,18 @@ a img {
   margin-bottom: 2.4rem;
 }
 
+@media (min-width: 800px) {
+  .featured-project {
+    margin-bottom: 4.8rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .featured-project {
+    margin-bottom: 6rem;
+  }
+}
+
 .featured-project--landscape {
   flex-basis: 100%;
   max-width: 100%;

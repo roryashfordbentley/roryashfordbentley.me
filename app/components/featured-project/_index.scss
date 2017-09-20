@@ -1,6 +1,12 @@
 .featured-project{
     padding-left: rem(60);
     margin-bottom: rem(24);
+    @include bp($m){
+        margin-bottom: rem(48);
+    }
+    @include bp($l){
+        margin-bottom: rem(60);
+    }
 }
 
 .featured-project--landscape{

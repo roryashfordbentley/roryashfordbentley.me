@@ -5,17 +5,19 @@ import ReactDOM from 'react-dom';
 import {
     BrowserRouter,
     Route,
-    Link
+    Link,
+    withRouter
 } from 'react-router-dom';
 
 const app = document.querySelector("#app");
 
+import ScrollToTop from './components/scroll-to-top'
 import Header from './components/header';
-
 import Home from './pages/home';
 import Projects from './pages/projects';
 import Project from './pages/project';
 import About from './pages/about';
+
 
 const sw = 'http://' + location.hostname +':3000/portfolio/app/serviceworker.js';
 
@@ -43,9 +45,15 @@ class App extends React.Component{
     }
 }
 
+
+
+
+
 ReactDOM.render(
     <BrowserRouter basename="/portfolio/app">
-        <App />
+        <ScrollToTop>
+            <App />
+        </ScrollToTop>
     </BrowserRouter>,
     app
 );
