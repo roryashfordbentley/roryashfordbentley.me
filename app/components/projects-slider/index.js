@@ -10,7 +10,7 @@ import Slide from '../projects-slide';
 import Slider from 'react-slick';
 import ButtonGroupPrevNext from '../button-group-prev-next';
 
-class ProjectsGrid extends React.Component {
+class ProjectsSlider extends React.Component {
 
     prevClick(e) {
         e.preventDefault();
@@ -24,11 +24,10 @@ class ProjectsGrid extends React.Component {
 
     outputItems(){
         let items = Object.keys(this.props.data).map((key,index) => {
-            let project = this.props.data[key];
-            
-            let title = project.title.rendered;
-            let slug = project.slug;
-            let image = project.acf.cover_image_landscape ? project.acf.cover_image_landscape.sizes.landscape_large : '';
+            let project = this.props.data[key],
+                title = project.title.rendered,
+                slug = project.slug,
+                image = project.acf.cover_image_landscape ? project.acf.cover_image_landscape.sizes.landscape_large : '';
 
             return (
                 <div key={index}>
@@ -68,10 +67,10 @@ class ProjectsGrid extends React.Component {
     }
 }
 
-ProjectsGrid.propTypes = {
-    data: PropTypes.array,
+ProjectsSlider.propTypes = {
+    data: PropTypes.object,
     term: PropTypes.string,
     title: PropTypes.string,
 };
 
-export default ProjectsGrid;
+export default ProjectsSlider;
