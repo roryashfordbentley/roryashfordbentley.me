@@ -35,7 +35,7 @@
     @include bp($m){
         width: rem(50);
         height: rem(50);
-        top: rem(44);
+        top: rem(50);
         right: rem(44);
     }
 }
@@ -65,8 +65,13 @@
     padding: rem(8) 0;
     @include fs6();
     a{
-        color: white;
+        color: $clr_grey_4;
         text-decoration: none;
+        transition: color 0.5s;
+    }
+
+    a:hover{
+        color: white;
     }
 }
 
@@ -90,6 +95,11 @@
 
     a{
         padding: 0 rem(10);
+        color: $clr_grey_4;
+        transition: color 0.5s;
+    }
+
+    a:hover{
         color: white;
     }
 }

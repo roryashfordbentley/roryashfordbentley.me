@@ -32,4 +32,4 @@ Preloader.propTypes = {
     loaded: PropTypes.bool,
 };
 
-export default Preloader ;
+export default Preloader;

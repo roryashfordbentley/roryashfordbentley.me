@@ -32,7 +32,7 @@
     @include bp($m){
         width: rem(50);
         height: rem(50);
-        top: rem(44);
+        top: rem(50);
         right: rem(44);
     }
 }
@@ -55,7 +55,7 @@
 
 .loading-animation__path{
     stroke: $clr_grey_2;
-    stroke-width: 1.5;
+    stroke-width: 1.25;
     fill: none;
     stroke-dasharray: 500;
     stroke-dashoffset: 500;

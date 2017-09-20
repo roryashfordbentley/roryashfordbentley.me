@@ -437,7 +437,7 @@ a img {
   .nav__bg {
     width: 5rem;
     height: 5rem;
-    top: 4.4rem;
+    top: 5rem;
     right: 4.4rem;
   }
 }
@@ -487,8 +487,13 @@ a img {
 }
 
 .nav__item a {
-  color: white;
+  color: #6A6A6A;
   text-decoration: none;
+  transition: color 0.5s;
+}
+
+.nav__item a:hover {
+  color: white;
 }
 
 .nav__sub-nav {
@@ -530,6 +535,11 @@ a img {
 
 .nav__sub-nav__item a {
   padding: 0 1rem;
+  color: #6A6A6A;
+  transition: color 0.5s;
+}
+
+.nav__sub-nav__item a:hover {
   color: white;
 }
 
@@ -1501,7 +1511,7 @@ a img {
   .preloader__bg {
     width: 5rem;
     height: 5rem;
-    top: 4.4rem;
+    top: 5rem;
     right: 4.4rem;
   }
 }
@@ -1523,7 +1533,7 @@ a img {
 
 .loading-animation__path {
   stroke: #e8e8e8;
-  stroke-width: 1.5;
+  stroke-width: 1.25;
   fill: none;
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
