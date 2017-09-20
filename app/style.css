@@ -1548,3 +1548,29 @@ a img {
     stroke-dashoffset: 0;
   }
 }
+
+.codepen-embed {
+  margin-bottom: 4.8rem;
+}
+
+@media (min-width: 800px) {
+  .codepen-embed {
+    margin-bottom: 9.6rem;
+  }
+}
+
+.codepen-embed iframe {
+  height: 40rem;
+}
+
+@media (min-width: 800px) {
+  .codepen-embed iframe {
+    height: 55rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .codepen-embed iframe {
+    height: 70rem;
+  }
+}

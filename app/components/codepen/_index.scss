@@ -1,0 +1,16 @@
+.codepen-embed{
+    margin-bottom: rem(48);
+    @include bp($m){
+        margin-bottom: rem(96);
+    }
+}
+
+.codepen-embed iframe{
+    height: rem(400);
+    @include bp($m){
+        height: rem(550);
+    } 
+    @include bp($l){
+        height: rem(700);
+    } 
+}
