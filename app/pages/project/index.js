@@ -10,15 +10,15 @@ import {
 } from 'react-router-dom';
 
 import ApiPrefix from '../../lib/api';
-import ProjectsSlider from '../projects-slider';
-import Header from '../header';
+import ProjectsSlider from '../../components/projects-slider';
+import Header from '../../components/header';
 
-import ProjectHeader from '../project-single-header';
-import ProjectCoverImage from '../project-single-cover-image';
-import DetailImages from '../project-single-detail-images';
-import TechnicalOverview from '../project-single-technical-overview';
-import ProjectDescription from '../project-single-description';
-import Codepen from '../codepen';
+import ProjectHeader from '../../components/project-single-header';
+import ProjectCoverImage from '../../components/project-single-cover-image';
+import DetailImages from '../../components/project-single-detail-images';
+import TechnicalOverview from '../../components/project-single-technical-overview';
+import ProjectDescription from '../../components/project-single-description';
+import Codepen from '../../components/codepen';
 
 class Project extends React.Component {
 

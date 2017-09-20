@@ -4,10 +4,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import ApiPrefix from '../../lib/api';
-import Header from '../header';
-import Footer from '../footer';
-import HomeIntro from '../home-intro';
-import FeaturedProjects from '../featured-projects';
+import Header from '../../components/header';
+import Footer from '../../components/footer';
+import HomeIntro from '../../components/home-intro';
+import FeaturedProjects from '../../components/featured-projects';
 
 class Home extends React.Component {
 

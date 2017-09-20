@@ -11,15 +11,17 @@ import {
 const app = document.querySelector("#app");
 
 import Header from './components/header';
-import Home from './components/page-home';
-import Projects from './components/page-projects';
-import Project from './components/page-project';
-import About from './components/page-about';
-import Contact from './components/page-contact';
+
+import Home from './pages/home';
+import Projects from './pages/projects';
+import Project from './pages/project';
+import About from './pages/about';
+import Contact from './pages/contact';
+
 import FeaturedProjects from './components/featured-projects';
 import ProjectSingle from './components/project-single';
 
-/*if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('serviceworker.js').then(function(registration) {
             // Registration was successful
@@ -29,7 +31,7 @@ import ProjectSingle from './components/project-single';
             console.log('ServiceWorker registration failed: ', err);
         });
     });
-}*/
+}
 
 class App extends React.Component{
     render(){

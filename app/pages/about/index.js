@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Header from '../header';
+import Header from '../../components/header';
 
 class About extends React.Component {
 

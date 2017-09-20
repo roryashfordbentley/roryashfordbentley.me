@@ -10,9 +10,9 @@ import {
 } from 'react-router-dom';
 
 import ApiPrefix from '../../lib/api';
-import ProjectsSlider from '../projects-slider';
-import Header from '../header';
-import ProjectSingle from '../project-single';
+import ProjectsSlider from '../../components/projects-slider';
+import Header from '../../components/header';
+import ProjectSingle from '../../components/project-single';
 
 class Projects extends React.Component {
 
