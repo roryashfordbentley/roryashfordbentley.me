@@ -18,13 +18,14 @@ import Project from './pages/project';
 import About from './pages/about';
 import Contact from './pages/contact';
 
+const sw = 'http://' + location.hostname +':3000/portfolio/app/serviceworker.js';
+
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-        navigator.serviceWorker.register('serviceworker.js').then(function(registration) {
+        navigator.serviceWorker.register(sw).then(function(registration) {
             // Registration was successful
-            //console.log('ServiceWorker registration successful with scope: ', registration.scope);
         }, function(err) {
-            // registration failed :(
+            // registration failed
             console.log('ServiceWorker registration failed: ', err);
         });
     });
