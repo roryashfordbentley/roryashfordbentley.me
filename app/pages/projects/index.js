@@ -12,6 +12,7 @@ import {
 import ApiPrefix from '../../lib/api';
 import ProjectsSlider from '../../components/projects-slider';
 import Header from '../../components/header';
+import Footer from '../../components/footer';
 
 class Projects extends React.Component {
 
@@ -71,7 +72,9 @@ class Projects extends React.Component {
                         </div>
                     }
                 />
+                <Footer />
             </div>
+
         );
     }
 }

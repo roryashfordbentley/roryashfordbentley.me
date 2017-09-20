@@ -11,6 +11,7 @@ import {
 
 import ApiPrefix from '../../lib/api';
 import Header from '../../components/header';
+import Footer from '../../components/footer';
 
 import ProjectHeader from '../../components/project-header';
 import ProjectCoverImage from '../../components/project-cover-image';
@@ -86,6 +87,7 @@ class Project extends React.Component {
                         </section>
                     }
                 />
+                <Footer />
             </div>
         );
     }

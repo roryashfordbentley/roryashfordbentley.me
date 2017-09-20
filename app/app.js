@@ -16,7 +16,6 @@ import Home from './pages/home';
 import Projects from './pages/projects';
 import Project from './pages/project';
 import About from './pages/about';
-import Contact from './pages/contact';
 
 const sw = 'http://' + location.hostname +':3000/portfolio/app/serviceworker.js';
 
@@ -39,7 +38,6 @@ class App extends React.Component{
                 <Route exact path="/projects" component={Projects} />
                 <Route path="/projects/:ProjectSlug" component={Project} />
                 <Route exact path="/about" component={About} />
-                <Route exact path="/contact" component={Contact} />
             </div>
         );
     }

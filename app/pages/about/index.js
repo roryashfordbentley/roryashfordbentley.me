@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Header from '../../components/header';
+import Footer from '../../components/footer';
 
 class About extends React.Component {
 
@@ -52,6 +53,7 @@ class About extends React.Component {
                         <p>Ace Performance, Aire Valley Architectural, Airflow Compressors, Ambrose Hire, Ankerherz, Ann Forshaws, Baie Slings, BARCA Leeds, Baxandalls, Bodycraft, Bradley Bar, CIGA, Cohen & Wilks, The Citizenry, Consultant Medical, Control & Power, CWISC, Elevate Leeds, ERS Medical, Expect Distribution, Flagship Leeds, Hansons Chartered Surveyors, Herculean, Insuletics, Just a Boy, Keystone Healthcare, Kingston Thermal, Lansdowne Motors, MAE Care, Mark Thompson, Ministry Of Sound, NAPA Sports Nutrition, Newgen Power, NiceMartin, Packt Publishing, S+B, School Milk, Trueform Digital, Wetherby Building Systems</p>
                     </div>
                 </section>
+                <Footer />
             </div>
         );
     }
