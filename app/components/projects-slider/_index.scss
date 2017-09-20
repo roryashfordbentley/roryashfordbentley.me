@@ -1,5 +1,13 @@
 .projects-slider{
-    
+    padding: rem(42) 0;
+
+    @include bp($m){
+        padding: rem(64) 0;
+    }
+
+    @include bp($l){
+        padding: rem(80) 0;
+    }
 }
 
 .projects-slider--work{
@@ -21,14 +29,14 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: rem(48);
-    padding: rem(42) rem(24) 0 rem(24);
+    padding: 0 rem(24);
     
     @include bp($m){
-        padding: rem(64) rem(48) 0 rem(48);
+        padding: 0 rem(48);
     }
 
     @include bp($l){
-        padding: rem(80) rem(48) 0 rem(48);
+        padding: 0 rem(48);
     }
 }
 
