@@ -68,9 +68,12 @@ class ProjectsSlider extends React.Component {
 }
 
 ProjectsSlider.propTypes = {
-    data: PropTypes.object,
     term: PropTypes.string,
     title: PropTypes.string,
+    data: PropTypes.oneOfType([
+      PropTypes.object,
+      PropTypes.array
+    ])
 };
 
 export default ProjectsSlider;

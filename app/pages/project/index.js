@@ -10,7 +10,6 @@ import {
 } from 'react-router-dom';
 
 import ApiPrefix from '../../lib/api';
-import ProjectsSlider from '../../components/projects-slider';
 import Header from '../../components/header';
 
 import ProjectHeader from '../../components/project-header';
