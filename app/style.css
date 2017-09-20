@@ -49,7 +49,7 @@ textarea:last-child {
 
 a {
   position: relative;
-  color: #6A6A6A;
+  color: #2A2C2E;
   text-decoration: none;
   display: inline-block;
   font-weight: 500;
@@ -595,6 +595,7 @@ a img {
 
 .featured-project {
   padding-left: 6rem;
+  margin-bottom: 2.4rem;
 }
 
 .featured-project--landscape {
