@@ -1,8 +1,23 @@
-.projects-grid{
+.projects-slider{
     
 }
 
-.project-grid__header{
+.projects-slider--work{
+    background: $clr_grey_1;
+}
+
+.projects-slider--open-source{
+    background: $clr_grey_2;
+}
+.projects-slider--experiments{
+    background: $clr_grey_3;
+}
+
+.projects-slider__title{
+    @include fs4();
+}
+
+.project-slider__header{
     display: flex;
     justify-content: space-between;
     margin-bottom: rem(48);
@@ -17,17 +32,3 @@
     }
 }
 
-.projects-grid--work{
-    background: $clr_grey_1;
-}
-
-.projects-grid--open-source{
-    background: $clr_grey_2;
-}
-.projects-grid--experiment{
-    background: $clr_grey_3;
-}
-
-.projects-grid__title{
-    @include fs4();
-}

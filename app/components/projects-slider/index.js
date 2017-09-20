@@ -39,6 +39,18 @@ class ProjectsSlider extends React.Component {
         return items;
     }
 
+    bgColor(id){
+        if(id === 1){
+            return 'projects-slider--work';
+        } else if (id === 2){
+            return 'projects-slider--open-source';
+        } else if (id === 3){
+            return 'projects-slider--experiments';
+        }
+
+        return 'projectspoop';
+    }
+
     render() {
         var settings = {
             dots: false,
@@ -56,9 +68,9 @@ class ProjectsSlider extends React.Component {
         };
 
         return (
-            <div className={'projects-grid  projects-grid--' + this.props.term}>
-                <header className="project-grid__header">
-                    <h1 className="projects-grid__title">{this.props.title}</h1>
+            <div className={'projects-slider ' + this.bgColor(this.props.id)}>
+                <header className="project-slider__header">
+                    <h1 className="projects-slider__title">{this.props.title}</h1>
                     <ButtonGroupPrevNext onClickPrev={(e)=>this.prevClick(e)} onClickNext={(e)=>this.nextClick(e)} />
                 </header>
                 {this.outputItems().length > 0 ? <Slider ref="slider" {...settings}>{ this.outputItems() }</Slider> : null}
@@ -68,12 +80,12 @@ class ProjectsSlider extends React.Component {
 }
 
 ProjectsSlider.propTypes = {
-    term: PropTypes.string,
     title: PropTypes.string,
     data: PropTypes.oneOfType([
-      PropTypes.object,
-      PropTypes.array
-    ])
+        PropTypes.object,
+        PropTypes.array
+    ]),
+    id: PropTypes.number
 };
 
 export default ProjectsSlider;

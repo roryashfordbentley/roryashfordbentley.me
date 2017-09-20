@@ -65,9 +65,9 @@ class Projects extends React.Component {
                 <Route exact path={'/projects'} 
                     render={ () => 
                         <div>
-                            <ProjectsSlider data={this.state.work} title="Work" />
-                            <ProjectsSlider data={this.state.openSource} title="Open Source" />
-                            <ProjectsSlider data={this.state.experiments} title="Experiments" />
+                            <ProjectsSlider data={this.state.work} title="Work" id={1} />
+                            <ProjectsSlider data={this.state.openSource} title="Open Source" id={2} />
+                            <ProjectsSlider data={this.state.experiments} title="Experiments" id={3} />
                         </div>
                     }
                 />
