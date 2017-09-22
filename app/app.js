@@ -19,7 +19,7 @@ import Project from './pages/project';
 import About from './pages/about';
 import NotFound from './pages/not-found';
 
-const sw = 'http://' + location.hostname +'/portfolio/app/serviceworker.js';
+const sw = 'https://' + location.hostname +'/portfolio/app/serviceworker.js';
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
