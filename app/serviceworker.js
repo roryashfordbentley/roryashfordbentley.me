@@ -1,8 +1,7 @@
-var CACHE_NAME = 'roryashfordbentley-cache-v2';
+var CACHE_NAME = 'roryashfordbentley-cache-v3';
 var urlsToCache = [
-  '/',
-  'style.css',
-  'app.min.js'
+  'app/style.css',
+  'app/app.min.js'
 ];
 
 self.addEventListener('install', function(event) {
@@ -31,7 +30,7 @@ self.addEventListener('fetch', function(event) {
 
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['roryashfordbentley-cache-v2'];
+  var cacheWhitelist = ['roryashfordbentley-cache-v3'];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
