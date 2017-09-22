@@ -917,13 +917,16 @@ a img {
   justify-content: center;
   margin-top: -4.7rem;
   visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.25s linear;
 }
 
-.featured-project__link:hover .feature-project__button-overlay {
+.featured-project:hover .feature-project__button-overlay {
   visibility: visible;
+  opacity: 1;
 }
 
-.featured-project__link:hover .featured-project__img::after {
+.featured-project:hover .featured-project__img::after {
   box-shadow: 0 12px 30px rgba(255, 0, 0, 0.5);
   opacity: 1;
 }

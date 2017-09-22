@@ -64,7 +64,6 @@ class FeaturedProject extends React.Component {
         if(this.props.aspect === 'portrait') {
             gridClass = 'featured-project  featured-project--portrait';
         } 
-
         return gridClass;
     }
 
@@ -75,15 +74,18 @@ class FeaturedProject extends React.Component {
     render() {
         return (
             <div className={this.aspectRatioGrid()}>
-                <Link className="featured-project__link" to={'/projects/' + this.state.slug}>
-                    <img className="featured-project__img" src={this.state.img} alt={this.state.title + ' project image'} />
+                <figure className="featured-project__item">
+                    <Link className="featured-project__link" to={'/projects/' + this.state.slug}>
+                        <img className="featured-project__img" src={this.state.img} alt={this.state.title + ' project image'} />
+                    </Link>
                     <div className="feature-project__button-overlay">
                         <Button link={'/projects/' + this.state.slug}>
                             View Project
                             <RightArrow />
                         </Button>
                     </div>
-                </Link>
+                </figure>
+                
 
                 <span className="featured-project__cat">{this.state.taxonomy}</span>
                 <Link to={'/projects/' + this.state.slug}>

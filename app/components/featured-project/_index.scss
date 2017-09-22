@@ -55,14 +55,17 @@
     display: flex;
     justify-content: center;
     margin-top: rem(-47);
-    visibility: hidden;
+    visibility:hidden;
+    opacity:0;
+    transition:opacity 0.25s linear;
 }
 
-.featured-project__link:hover .feature-project__button-overlay{
-    visibility: visible;
+.featured-project:hover .feature-project__button-overlay{
+    visibility:visible;
+    opacity:1;
 }
 
-.featured-project__link:hover .featured-project__img::after{
+.featured-project:hover .featured-project__img::after{
     box-shadow: 0 12px 30px rgba(red,0.5);
     opacity: 1;
 }
