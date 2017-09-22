@@ -29,7 +29,7 @@ class Navigation extends React.Component {
                     <li onClick={this.props.onClick} className="nav__item"><Link to="/about">About</Link></li>
                 </ul>
                 <ul className={this.props.toggle === true ? "nav__sub-nav nav__sub-nav--open" : "nav__sub-nav"}>
-                    <li className="nav__sub-nav__item"><a href="#">Mail</a></li>
+                    <li className="nav__sub-nav__item"><a href="mailto:rory@roryashfordbentley.me">Mail</a></li>
                     <li className="nav__sub-nav__item"><a href="//github.com/roikles">Github</a></li>
                     <li className="nav__sub-nav__item"><a href="//codepen.io/roikles/">Codepen</a></li>
                     <li className="nav__sub-nav__item"><a href="//twitter.com/roikles">Twitter</a></li>

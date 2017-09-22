@@ -15,7 +15,7 @@ class Footer extends React.Component {
                     <li className="site-footer__nav__item"><Link to="/">Home</Link></li>
                     <li className="site-footer__nav__item"><Link to="/projects">Projects</Link></li>
                     <li className="site-footer__nav__item"><Link to="/about">About</Link></li>
-                    <li className="site-footer__nav__item"><a href="#">Mail</a></li>
+                    <li className="site-footer__nav__item"><a href="mailto:rory@roryashfordbentley.me">Mail</a></li>
                 </ul>
                 
                 <ul className="site-footer__nav site-footer__nav--2">
