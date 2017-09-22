@@ -22,7 +22,7 @@ class NotFound extends React.Component {
                 <Header />
                 <div className="not-found">
                     <h1 className="not-found__text">Sorry, the request could not be found :(</h1>
-                    <img src="assets/img/not-found.gif" alt="not found" />
+                    <img src="assets/img/not-found.gif" alt="page not found man looking around" />
                 </div>
                 <Footer />
             </div>

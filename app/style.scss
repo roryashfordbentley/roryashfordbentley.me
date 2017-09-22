@@ -13,6 +13,11 @@
 @import "assets/scss/globals/_wrappers.scss";
 
 // Components
+
+@import "pages/project/_index.scss";
+@import "pages/not-found/_index.scss";
+@import "pages/about/_index.scss";
+
 @import "components/button/_index.scss";
 @import "components/header/_index.scss";
 @import "components/footer/_index.scss";
@@ -23,7 +28,6 @@
 @import "components/featured-project/_index.scss";
 @import "components/projects-slider/_index.scss";
 @import "components/projects-slide/_index.scss";
-@import "pages/project/_index.scss";
 @import "components/project-header/_index.scss";
 @import "components/project-cover-image/_index.scss";
 @import "components/project-detail-images/_index.scss";
@@ -32,6 +36,5 @@
 @import "components/icons/_index.scss";
 @import "components/button-group-prev-next/_index.scss";
 @import "components/slider/_index.scss";
-@import "pages/about/_index.scss";
 @import "components/preloader/_index.scss";
 @import "components/codepen/_index.scss";

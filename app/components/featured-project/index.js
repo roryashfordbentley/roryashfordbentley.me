@@ -11,6 +11,9 @@ import {
 } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+import Button from '../button';
+import RightArrow from '../icons/right-arrow';
+
 class FeaturedProject extends React.Component {
 
     constructor(props) {
@@ -72,9 +75,16 @@ class FeaturedProject extends React.Component {
     render() {
         return (
             <div className={this.aspectRatioGrid()}>
-                <Link to={'/projects/' + this.state.slug}>
+                <Link className="featured-project__link" to={'/projects/' + this.state.slug}>
                     <img className="featured-project__img" src={this.state.img} alt={this.state.title + ' project image'} />
+                    <div className="feature-project__button-overlay">
+                        <Button link={'/projects/' + this.state.slug}>
+                            View Project
+                            <RightArrow />
+                        </Button>
+                    </div>
                 </Link>
+
                 <span className="featured-project__cat">{this.state.taxonomy}</span>
                 <Link to={'/projects/' + this.state.slug}>
                     <h2 className="featured-project__title">{this.state.title}</h2>
