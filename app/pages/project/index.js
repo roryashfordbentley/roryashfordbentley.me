@@ -76,18 +76,21 @@ class Project extends React.Component {
         return (
             <div className="container">
                 <Header loaded={this.state.loaded} />
-                <Route exact path={'/projects/:ProjectSlug'} 
-                    render={ () => 
-                        <section className="project-single">
-                            <ProjectHeader taxonomy={this.state.taxonomy} title={this.state.title} link={this.state.url} />
-                            <ProjectCoverImage img={this.state.coverImg} />
-                            <ProjectDescription text={this.state.content} />
-                            <Codepen code={this.state.codepen} />
-                            <DetailImages img1={this.state.detailImg1} img2={this.state.detailImg2} />
-                            <TechnicalOverview text={this.state.technicalOverview} />
-                        </section>
-                    }
-                />
+                {this.state.loaded === true &&
+                    <Route exact path={'/projects/:ProjectSlug'} 
+                        render={ () => 
+                            <section className="project-single">
+                                <ProjectHeader taxonomy={this.state.taxonomy} title={this.state.title} link={this.state.url} />
+                                <ProjectCoverImage img={this.state.coverImg} />
+                                <ProjectDescription text={this.state.content} />
+                                <Codepen code={this.state.codepen} />
+                                <DetailImages img1={this.state.detailImg1} img2={this.state.detailImg2} />
+                                <TechnicalOverview text={this.state.technicalOverview} />
+                            </section>
+                        }
+                    />
+                    
+                }
                 <Footer />
             </div>
         );
