@@ -1,7 +1,8 @@
 var CACHE_NAME = 'roryashfordbentley-cache-v3';
 var urlsToCache = [
   'app/style.css',
-  'app/app.min.js'
+  'app/app.min.js',
+  'wordpress/wp-json/wp/v2/pages/5'
 ];
 
 self.addEventListener('install', function(event) {

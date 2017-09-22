@@ -85,8 +85,6 @@ class FeaturedProject extends React.Component {
                         </Button>
                     </div>
                 </figure>
-                
-
                 <span className="featured-project__cat">{this.state.taxonomy}</span>
                 <Link to={'/projects/' + this.state.slug}>
                     <h2 className="featured-project__title">{this.state.title}</h2>
