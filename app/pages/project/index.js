@@ -45,19 +45,20 @@ class Project extends React.Component {
         fetch(url + slug + '&_embed')
         .then((response) => response.json())
         .then((data) => {
-
-            this.setState({ 
-                title: data[0].title.rendered,
-                taxonomy: data[0]._embedded['wp:term'][0][0].name,
-                url: data[0].acf.link_to_project,
-                content: data[0].content.rendered,
-                technicalOverview: data[0].acf.technical_overview,
-                coverImg: data[0].acf.cover_image_landscape ? data[0].acf.cover_image_landscape.sizes.landscape_cropped : '',
-                detailImg1: data[0].acf.detail_image_1 ? data[0].acf.detail_image_1.sizes.landscape_large : '',
-                detailImg2: data[0].acf.detail_image_2 ? data[0].acf.detail_image_2.sizes.landscape_large : '',
-                codepen: data[0].acf.codepen_embed
-            });
-
+            if(data.length > 0){
+                this.setState({ 
+                    title: data[0].title.rendered,
+                    taxonomy: data[0]._embedded['wp:term'][0][0].name,
+                    url: data[0].acf.link_to_project,
+                    content: data[0].content.rendered,
+                    technicalOverview: data[0].acf.technical_overview,
+                    coverImg: data[0].acf.cover_image_landscape ? data[0].acf.cover_image_landscape.sizes.landscape_cropped : '',
+                    detailImg1: data[0].acf.detail_image_1 ? data[0].acf.detail_image_1.sizes.landscape_large : '',
+                    detailImg2: data[0].acf.detail_image_2 ? data[0].acf.detail_image_2.sizes.landscape_large : '',
+                    codepen: data[0].acf.codepen_embed
+                });
+            }
+            
             setTimeout(function(){
                 this.setState({ loaded: true })
             }.bind(this),1000);
