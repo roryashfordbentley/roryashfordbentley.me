@@ -151,8 +151,6 @@ echo "${lightGreen}⚡ Replaced in build/app.min.js  [${lightBlue}/$buildFolder$
 replace "/portfolio/app" "/app" -- build/app/index.html
 echo "${lightGreen}⚡ Replaced in build/app.min.js  [${lightBlue}/$buildFolder${lightGreen}]${nc}"
 
-replace "/portfolio/wordpress" "/wordpress" -- build/app/lib/api.js
-echo "${lightGreen}⚡ Replaced build/app/lib/api.js  [${lightBlue}/$buildFolder${lightGreen}]${nc}"
 
 
 echo $hrThin
