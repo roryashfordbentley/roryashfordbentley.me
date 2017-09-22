@@ -1,0 +1,16 @@
+.not-found{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: rem(400);
+    flex-direction: column;
+
+    @include bp($l){
+        flex-direction: row;
+    }
+}
+
+    .not-found__text{
+        @include fs2();
+        padding: rem(48) 0;
+    }
