@@ -21,7 +21,7 @@ import NotFound from './pages/not-found';
 
 const sw = 'http://' + location.hostname +'/portfolio/app/serviceworker.js';
 
-/*if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register(sw).then(function(registration) {
             // Registration was successful
@@ -30,7 +30,7 @@ const sw = 'http://' + location.hostname +'/portfolio/app/serviceworker.js';
             console.log('ServiceWorker registration failed: ', err);
         });
     });
-}*/
+}
 
 class App extends React.Component{
     render(){
