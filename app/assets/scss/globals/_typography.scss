@@ -76,16 +76,13 @@ a:hover{
 }
 
 // paragraph link underlines
-p a:hover{
-    &:after{
-        position: absolute;
-        content:'';
-        left: 0;
-        right: 0;
-        bottom: 18%;
-        height: rem(1);
-        background: black;
-    }
+
+p > a {
+    display: inline;
+}
+
+p > a:hover{
+    @include underline(white, #000, #ffc, 95%, 1px);
 }
 
 // Headings
