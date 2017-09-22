@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 projectName="Flexbones"
 localUrl="http://localhost/portfolio"
-remoteUrl="http://roryashfordbentley.me"
+remoteUrl="https://roryashfordbentley.me"
 remoteUrlRelative="roryashfordbentley.me"
 remoteUrlPath="/home/cfcbecsi/roryashfordbentley.me"
 remoteMysqlDb="cfcbecsi_portfolio"
@@ -57,7 +57,7 @@ backup_database () {
     echo "  with [${lightBlue}$2${lightGreen}]${nc}"
     echo $hrThin
     #wp db export --tables=$(wp db tables --all-tables-with-prefix --format=csv)
-    wp --quiet search-replace $1 $2 wp_* --export=$3
+    wp --path='wordpress' --quiet search-replace $1 $2 3412Ds_* --export=$3
   
 } 
 
@@ -82,7 +82,6 @@ declare -a backupOptions=(
     --exclude='pages'
     --exclude='lib'
     --exclude='assets/scss'
-    --exclude='serviceworker.js'
     --exclude='style.scss'
     --exclude='app.js'
     --exclude='.eslintrc'
@@ -141,24 +140,25 @@ echo $hrThin
 echo "${lightGreen}⚡ Finding local specific code and replacing it for the server [${lightBlue}/$buildFolder${lightGreen}]${nc}"
 
 # Find and replace all the things
-replace "/portfolio/app/serviceworker.js" "/app/serviceworker.js" -- build/app/app.min.js
+replace "/portfolio/app/serviceworker.js" "/serviceworker.js" -- build/app/app.min.js
 replace "/portfolio/wordpress/wp-json/wp/v2/" "/wordpress/wp-json/wp/v2/" -- build/app/app.min.js
 replace "/portfolio/app" "/" -- build/app/app.min.js
 replace "'assets/img/" "'app/assets/img/" -- build/app/app.min.js
 
 echo "${lightGreen}⚡ Replaced in build/app.min.js  [${lightBlue}/$buildFolder${lightGreen}]${nc}"
 
-replace "/portfolio/app" "/app" -- build/app/index.html
+replace "/portfolio/app/manifest.json" "/manifest.json" -- build/app/index.html
+replace "/portfolio/app" "/" -- build/app/index.html
 echo "${lightGreen}⚡ Replaced in build/app.min.js  [${lightBlue}/$buildFolder${lightGreen}]${nc}"
 
-
+mv build/app/* .
 
 echo $hrThin
 
 echo "${lightGreen}⚡ Backing up Database to: [${lightBlue}/$buildFolder${lightGreen}]${nc}"
 
 # change the DB paths
-#backup_database $localUrl $remoteUrl $buildFolder/$dbBackupName
+backup_database $localUrl $remoteUrl $buildFolder/$dbBackupName
 
 echo "${lightGreen}⚡ Deploying files to server${nc}"
 
