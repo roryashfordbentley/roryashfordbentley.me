@@ -1205,17 +1205,6 @@ a img {
   overflow: hidden;
 }
 
-/*.detail-imgs__stripes{
-    position: absolute;
-    width: 162%;
-    max-width: rem(2100);
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.detail-imgs__stripes__stripe{
-    fill: $clr_brand;
-}*/
 .detail-imgs__grid {
   position: relative;
   display: flex;
@@ -1267,7 +1256,7 @@ a img {
 }
 
 .technical-overview {
-  margin: 4rem 0;
+  margin: 3rem 0;
 }
 
 @media (min-width: 800px) {
@@ -1330,7 +1319,7 @@ a img {
 
 .project-single__description {
   font-size: 2rem;
-  margin: 7.2rem 0;
+  margin: 4.8rem 0;
 }
 
 @media (min-width: 800px) {
@@ -1354,7 +1343,14 @@ a img {
 @media (min-width: 800px) {
   .project-single__description {
     max-width: 75%;
-    margin: 12rem 0;
+    margin: 8.5rem 0;
+  }
+}
+
+@media (min-width: 1100px) {
+  .project-single__description {
+    max-width: 75%;
+    margin: 10rem 0;
   }
 }
 

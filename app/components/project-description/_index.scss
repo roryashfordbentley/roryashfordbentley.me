@@ -2,11 +2,16 @@
 
 .project-single__description{
     @include fs4();
-    margin: rem(72) 0;
+    margin: rem(48) 0;
     
     @include bp($m){
         max-width: 75%;
-        margin: rem(120) 0;
+        margin: rem(85) 0;
+    }
+
+    @include bp($l){
+        max-width: 75%;
+        margin: rem(100) 0;
     }
 }
 
