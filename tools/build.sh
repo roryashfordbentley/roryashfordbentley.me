@@ -148,17 +148,17 @@ replace "'assets/img/" "'app/assets/img/" -- build/app/app.min.js
 echo "${lightGreen}⚡ Replaced in build/app.min.js  [${lightBlue}/$buildFolder${lightGreen}]${nc}"
 
 replace "/portfolio/app/manifest.json" "/manifest.json" -- build/app/index.html
-replace "/portfolio/app" "/" -- build/app/index.html
+replace "/portfolio/app" "" -- build/app/index.html
 echo "${lightGreen}⚡ Replaced in build/app.min.js  [${lightBlue}/$buildFolder${lightGreen}]${nc}"
 
-mv build/app/* .
+mv build/app/* build/
 
 echo $hrThin
 
 echo "${lightGreen}⚡ Backing up Database to: [${lightBlue}/$buildFolder${lightGreen}]${nc}"
 
 # change the DB paths
-backup_database $localUrl $remoteUrl $buildFolder/$dbBackupName
+#backup_database $localUrl $remoteUrl $buildFolder/$dbBackupName
 
 echo "${lightGreen}⚡ Deploying files to server${nc}"
 
