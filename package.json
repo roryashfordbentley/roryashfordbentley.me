@@ -10,7 +10,7 @@
     "watch:js": "fsmonitor -d app/ -q '+*.js' '!app.min.js' npm run js",
     "browsersync": "browser-sync start --files 'app/*, !app/**/*.scss, !app/app.js, !.git/*, app/**/*' --no-open --proxy localhost/portfolio",
     "watch": "npm run -s watch:sass & npm run watch:js & npm run browsersync",
-    "deploy": "sh tools/build-deploy.sh"
+    "build": "sh tools/build.sh"
   },
   "dependencies": {
     "babel-core": "^6.17.0",
