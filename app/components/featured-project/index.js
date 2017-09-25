@@ -54,8 +54,6 @@ class FeaturedProject extends React.Component {
                 img = data.acf.cover_image_portrait.sizes.portrait_large;
             }
         }
-        
-
         return img;
     }
 
