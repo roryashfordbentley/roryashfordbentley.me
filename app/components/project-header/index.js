@@ -12,6 +12,19 @@ import {
 import PropTypes from 'prop-types';
 
 class ProjectHeader extends React.Component {
+
+    linkTitle(){
+        if (this.props.taxonomy === 'Work'){
+            return 'View Website';
+        } else if (this.props.taxonomy === 'Open Source') {
+            return 'View On Github';
+        } else if (this.props.taxonomy === 'Experiment') {
+            return 'View On Codepen';
+        } else {
+            return 'View Project';
+        }
+    }
+
     render() {
         return (
             <section className="project-header">
@@ -24,7 +37,7 @@ class ProjectHeader extends React.Component {
                 </div>
                 <div className="project-header__aside">
                     <Button link={this.props.link}>
-                        View Project
+                        {this.linkTitle()}
                         <RightArrow />
                     </Button>
                 </div>
