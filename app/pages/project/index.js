@@ -53,7 +53,7 @@ class Project extends React.Component {
                     url: data[0].acf.link_to_project,
                     content: data[0].content.rendered,
                     technicalOverview: data[0].acf.technical_overview,
-                    coverImg: data[0].acf.cover_image_landscape ? data[0].acf.cover_image_landscape.sizes.landscape_cropped : '',
+                    coverImg: data[0].acf.cover_image_landscape ? data[0].acf.cover_image_landscape.sizes.landscape_large : '',
                     detailImg1: data[0].acf.detail_image_1 ? data[0].acf.detail_image_1.sizes.landscape_large : '',
                     detailImg2: data[0].acf.detail_image_2 ? data[0].acf.detail_image_2.sizes.landscape_large : '',
                     codepen: data[0].acf.codepen_embed ? data[0].acf.codepen_embed : ''
