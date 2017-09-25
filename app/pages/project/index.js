@@ -45,6 +45,8 @@ class Project extends React.Component {
         fetch(url + slug + '&_embed')
         .then((response) => response.json())
         .then((data) => {
+            
+
             if(data.length > 0){
                 this.setState({ 
                     title: data[0].title.rendered,
@@ -72,6 +74,11 @@ class Project extends React.Component {
         this.getProjectData(this.baseProjectsUrl,this.slug);
     }
 
+    componentDidUpdate() {
+        console.log(this.state.detailImg1.length);
+        console.log(this.state.detailImg2.length);
+    }
+
     render() {
         return (
             <div className="container">
@@ -83,8 +90,8 @@ class Project extends React.Component {
                                 <ProjectHeader taxonomy={this.state.taxonomy} title={this.state.title} link={this.state.url} />
                                 <ProjectCoverImage img={this.state.coverImg} />
                                 <ProjectDescription text={this.state.content} />
-                                <Codepen code={this.state.codepen} />
-                                <DetailImages img1={this.state.detailImg1} img2={this.state.detailImg2} />
+                                { this.state.codepen.length > 0 && <Codepen code={this.state.codepen} />}
+                                { (this.state.detailImg1.length > 0 || this.state.detailImg2.length) > 0 && <DetailImages img1={this.state.detailImg1} img2={this.state.detailImg2} />}
                                 <TechnicalOverview text={this.state.technicalOverview} />
                             </section>
                         }
