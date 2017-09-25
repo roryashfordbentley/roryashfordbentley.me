@@ -94,6 +94,12 @@ ul, ol {
   margin-left: 1.2rem;
 }
 
+code {
+  background: #e8e8e8;
+  padding: 0 0.3rem;
+  border-radius: 0.3rem;
+}
+
 img {
   width: auto;
   max-width: 100%;
@@ -1583,38 +1589,13 @@ a img {
   opacity: 1;
   visibility: visible;
   overflow: hidden;
+  background: white;
 }
 
 .preloader--closed {
   opacity: 0;
   visibility: hidden;
-  transition: visibility 0s 2s, opacity 1.5s ease-in;
-}
-
-.preloader__bg {
-  background: #000000;
-  position: absolute;
-  top: 2.8rem;
-  right: 2.2rem;
-  z-index: -1;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  transform: scale(100, 100);
-}
-
-@media (min-width: 800px) {
-  .preloader__bg {
-    width: 5rem;
-    height: 5rem;
-    top: 5rem;
-    right: 4.4rem;
-  }
-}
-
-.preloader__bg--closed {
-  transform: scale(1, 1);
-  transition: transform 1s, background 2s ease-out;
+  transition: visibility 0s 0.5s, opacity 0.5s ease-in;
 }
 
 .loading-animation {
@@ -1624,16 +1605,16 @@ a img {
 
 .loading-animation--closed {
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.125s;
 }
 
 .loading-animation__path {
-  stroke: #e8e8e8;
-  stroke-width: 1.25;
+  stroke: #6A6A6A;
+  stroke-width: 1.125;
   fill: none;
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-  animation: stroke 2s linear infinite;
+  animation: stroke 1.5s linear infinite;
 }
 
 @keyframes stroke {
