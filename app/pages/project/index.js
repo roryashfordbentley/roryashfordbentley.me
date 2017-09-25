@@ -56,7 +56,7 @@ class Project extends React.Component {
                     coverImg: data[0].acf.cover_image_landscape ? data[0].acf.cover_image_landscape.sizes.landscape_cropped : '',
                     detailImg1: data[0].acf.detail_image_1 ? data[0].acf.detail_image_1.sizes.landscape_large : '',
                     detailImg2: data[0].acf.detail_image_2 ? data[0].acf.detail_image_2.sizes.landscape_large : '',
-                    codepen: data[0].acf.codepen_embed
+                    codepen: data[0].acf.codepen_embed ? data[0].acf.codepen_embed : ''
                 });
             }
             
