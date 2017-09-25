@@ -46,7 +46,6 @@ class Project extends React.Component {
         .then((response) => response.json())
         .then((data) => {
             
-
             if(data.length > 0){
                 this.setState({ 
                     title: data[0].title.rendered,
@@ -72,11 +71,6 @@ class Project extends React.Component {
 
     componentWillMount() {
         this.getProjectData(this.baseProjectsUrl,this.slug);
-    }
-
-    componentDidUpdate() {
-        console.log(this.state.detailImg1.length);
-        console.log(this.state.detailImg2.length);
     }
 
     render() {
