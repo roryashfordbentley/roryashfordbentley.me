@@ -11,37 +11,14 @@
     opacity: 1;
     visibility: visible;
     overflow: hidden;
+    background: white;
 }
 
 .preloader--closed{
     opacity: 0;
     visibility: hidden;
-    transition: visibility 0s 2s, opacity 1.5s ease-in;
+    transition: visibility 0s 0.5s, opacity 0.5s ease-in;
 }
-
-.preloader__bg{
-    background: $clr_black;
-    position: absolute;
-    top: rem(28);
-    right: rem(22);
-    z-index:-1;
-    width: rem(25);
-    height: rem(25);
-    border-radius: 50%;
-    transform: scale(100,100);
-    @include bp($m){
-        width: rem(50);
-        height: rem(50);
-        top: rem(50);
-        right: rem(44);
-    }
-}
-
-.preloader__bg--closed{
-    transform: scale(1,1);
-    transition: transform 1s, background 2s ease-out;
-}
-
 
 .loading-animation{
     width: rem(150);
@@ -50,16 +27,16 @@
 
 .loading-animation--closed{
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 0.125s;
 }
 
 .loading-animation__path{
-    stroke: $clr_grey_2;
-    stroke-width: 1.25;
+    stroke: $clr_grey_4;
+    stroke-width: 1.125;
     fill: none;
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
-    animation: stroke 2s linear infinite;
+    animation: stroke 1.5s linear infinite;
 }
 
 @keyframes stroke {

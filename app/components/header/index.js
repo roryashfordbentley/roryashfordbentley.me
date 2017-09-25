@@ -34,7 +34,7 @@ class Header extends React.Component {
     render() {
         return (
             <header className="site-header">
-                <h1 className={this.state.menuToggle === true || this.props.loaded === false ? "logo logo--alt" : "logo"}><Link to="/">Rory Ashford-Bentley</Link></h1>
+                <h1 className={this.state.menuToggle === true ? "logo logo--alt" : "logo"}><Link to="/">Rory Ashford-Bentley</Link></h1>
                 <Hamburger onClick={this.toggleMenu} toggle={this.state.menuToggle} loaded={this.props.loaded} />
                 <Nav onClick={this.toggleMenu} toggle={this.state.menuToggle} />
                 <Preloader loaded={this.props.loaded} />
