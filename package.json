@@ -5,7 +5,7 @@
     "sass": "node-sass app/style.scss app/style.css --output-style expanded",
     "browserify": "browserify app/app.js -t [ babelify --presets [ react ] ] -g [ envify --NODE_ENV production ] -g uglifyify -p bundle-collapser/plugin | uglifyjs --compress --mangle > ./app/app.min.js",
     "uglify": "uglifyjs app/app.min.js -o app/app.min.js",
-    "js": "npm run browserify && npm run uglify",
+    "js": "npm run browserify",
     "watch:sass": "fsmonitor -d app/ -q '+*.scss' '!app/style.scss' npm run -s sass",
     "watch:js": "fsmonitor -d app/ -q '+*.js' '!app.min.js' npm run js",
     "browsersync": "browser-sync start --files 'app/*, !app/**/*.scss, !app/app.js, !.git/*, app/**/*' --no-open --proxy localhost/portfolio",
