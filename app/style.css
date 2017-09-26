@@ -1219,7 +1219,6 @@ a img {
   display: flex;
   flex: 0 1 auto;
   flex-wrap: wrap;
-  max-width: 140rem;
   margin-left: -4.2%;
 }
 
