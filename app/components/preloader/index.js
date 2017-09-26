@@ -6,12 +6,20 @@ import PropTypes from 'prop-types';
 
 class Preloader extends React.Component {
 
-    componentDidUpdate() {
+    noScrollOnLoading(){
         if(this.props.loaded === false){
             document.body.classList.add('no-scroll');
         } else {
             document.body.classList.remove('no-scroll');
         }
+    }
+
+    componentDidMount() {
+        this.noScrollOnLoading();
+    }
+
+    componentDidUpdate() {
+        this.noScrollOnLoading();
     }
 
     render() {
