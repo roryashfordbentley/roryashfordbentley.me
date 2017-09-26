@@ -8,9 +8,9 @@ class Preloader extends React.Component {
 
     noScrollOnLoading(){
         if(this.props.loaded === false){
-            document.body.classList.add('no-scroll');
+            document.body.classList.add('preloading');
         } else {
-            document.body.classList.remove('no-scroll');
+            document.body.classList.remove('preloading');
         }
     }
 

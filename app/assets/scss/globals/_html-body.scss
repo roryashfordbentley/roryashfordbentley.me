@@ -18,6 +18,7 @@ html {
         color: $clr_text;
     }
 
-    .no-scroll{
+    .preloading, 
+    .menu-open{
         overflow: hidden;
     }

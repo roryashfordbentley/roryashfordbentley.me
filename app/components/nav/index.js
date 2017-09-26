@@ -13,10 +13,12 @@ class Navigation extends React.Component {
 
     noScrollWhenOpen(){
         if(this.props.toggle === true){
-            document.body.classList.add('no-scroll');
+            document.body.classList.add('menu-open');
+            console.log(document.body.classList);
         } else {
-            document.body.classList.remove('no-scroll');
-        }
+            document.body.classList.remove('menu-open');
+            console.log(document.body.classList);
+        }  
     }
 
     componentDidMount() {

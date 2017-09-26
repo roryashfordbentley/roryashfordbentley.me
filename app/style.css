@@ -26,7 +26,8 @@ body {
   color: #2A2C2E;
 }
 
-.no-scroll {
+.preloading,
+.menu-open {
   overflow: hidden;
 }
 
