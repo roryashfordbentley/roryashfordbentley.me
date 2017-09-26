@@ -20,11 +20,11 @@ class Navigation extends React.Component {
     }
 
     componentDidMount() {
-        this.oScrollWhenOpen();
+        this.noScrollWhenOpen();
     }
 
     componentDidUpdate() {
-        this.oScrollWhenOpen();
+        this.noScrollWhenOpen();
     }
 
     render() {
