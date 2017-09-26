@@ -11,8 +11,8 @@ import PropTypes from 'prop-types';
 
 class Navigation extends React.Component {
 
-    noScrollOnLoading(){
-        if(this.props.loaded === false){
+    noScrollWhenOpen(){
+        if(this.props.toggle === true){
             document.body.classList.add('no-scroll');
         } else {
             document.body.classList.remove('no-scroll');
@@ -20,11 +20,11 @@ class Navigation extends React.Component {
     }
 
     componentDidMount() {
-        this.noScrollOnLoading();
+        this.oScrollWhenOpen();
     }
 
     componentDidUpdate() {
-        this.noScrollOnLoading();
+        this.oScrollWhenOpen();
     }
 
     render() {
