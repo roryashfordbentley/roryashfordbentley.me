@@ -1,6 +1,6 @@
 .nav{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     flex-direction: column;
     position: absolute;
@@ -47,11 +47,15 @@
 }
 
 .nav__list{
-    text-align: center;
+    text-align: right;
     width: rem(400);
     list-style: none;
     opacity: 0;
     transition: opacity 0.25s ease-in;
+    padding: rem(24) rem(24) 0 rem(24);
+    @include bp($m){
+        padding: rem(48) rem(48) 0 rem(48);
+    }
 }
 
 .nav__list--open{
@@ -60,18 +64,17 @@
 }
 
 .nav__item{
-    font-weight: 400;
     line-height: 1.5;
-    padding: rem(8) 0;
     @include fs6();
     a{
-        color: $clr_grey_4;
+        font-weight: 400;
+        color: white;
         text-decoration: none;
         transition: color 0.5s;
     }
 
     a:hover{
-        color: white;
+        color: $clr_grey_4;
     }
 }
 
@@ -79,10 +82,15 @@
     display: flex;
     list-style: none;
     margin: 0;
-    padding-top: rem(30);
-    border-top: rem(1) solid $clr_grey_4;
+    flex-direction: column;
     opacity: 0;
     transition: opacity 0.25s ease-in;
+    padding: rem(24);
+    text-align: right;
+    @include bp($m){
+        flex-direction: row;
+        padding: rem(48);
+    }
 }
 
 .nav__sub-nav--open{
@@ -91,16 +99,16 @@
 }
 
 .nav__sub-nav__item{
-    @include fs1();
+    @include fs2();
 
     a{
-        padding: 0 rem(10);
-        color: $clr_grey_4;
+        font-size: 400;
+        padding: 0 0 0 rem(20);
+        color: white;
         transition: color 0.5s;
     }
 
     a:hover{
-        color: white;
+        color: $clr_grey_4;
     }
 }
-

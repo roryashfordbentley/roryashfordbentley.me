@@ -11,12 +11,20 @@ import PropTypes from 'prop-types';
 
 class Navigation extends React.Component {
 
-    componentDidUpdate() {
-        if(this.props.toggle === true){
+    noScrollOnLoading(){
+        if(this.props.loaded === false){
             document.body.classList.add('no-scroll');
         } else {
             document.body.classList.remove('no-scroll');
         }
+    }
+
+    componentDidMount() {
+        this.noScrollOnLoading();
+    }
+
+    componentDidUpdate() {
+        this.noScrollOnLoading();
     }
 
     render() {
@@ -33,7 +41,6 @@ class Navigation extends React.Component {
                     <li className="nav__sub-nav__item"><a href="//github.com/roikles">Github</a></li>
                     <li className="nav__sub-nav__item"><a href="//codepen.io/roikles/">Codepen</a></li>
                     <li className="nav__sub-nav__item"><a href="//twitter.com/roikles">Twitter</a></li>
-                    <li className="nav__sub-nav__item"><a href="//instagram.com/roikles">Instagram</a></li>
                 </ul>
             </nav>
         );

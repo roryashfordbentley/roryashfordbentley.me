@@ -651,7 +651,7 @@ a img {
 
 .nav {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   flex-direction: column;
   position: absolute;
@@ -701,11 +701,18 @@ a img {
 }
 
 .nav__list {
-  text-align: center;
+  text-align: right;
   width: 40rem;
   list-style: none;
   opacity: 0;
   transition: opacity 0.25s ease-in;
+  padding: 2.4rem 2.4rem 0 2.4rem;
+}
+
+@media (min-width: 800px) {
+  .nav__list {
+    padding: 4.8rem 4.8rem 0 4.8rem;
+  }
 }
 
 .nav__list--open {
@@ -714,9 +721,7 @@ a img {
 }
 
 .nav__item {
-  font-weight: 400;
   line-height: 1.5;
-  padding: 0.8rem 0;
   font-size: 3.6rem;
 }
 
@@ -739,23 +744,32 @@ a img {
 }
 
 .nav__item a {
-  color: #6A6A6A;
+  font-weight: 400;
+  color: white;
   text-decoration: none;
   transition: color 0.5s;
 }
 
 .nav__item a:hover {
-  color: white;
+  color: #6A6A6A;
 }
 
 .nav__sub-nav {
   display: flex;
   list-style: none;
   margin: 0;
-  padding-top: 3rem;
-  border-top: 0.1rem solid #6A6A6A;
+  flex-direction: column;
   opacity: 0;
   transition: opacity 0.25s ease-in;
+  padding: 2.4rem;
+  text-align: right;
+}
+
+@media (min-width: 800px) {
+  .nav__sub-nav {
+    flex-direction: row;
+    padding: 4.8rem;
+  }
 }
 
 .nav__sub-nav--open {
@@ -764,35 +778,36 @@ a img {
 }
 
 .nav__sub-nav__item {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 @media (min-width: 800px) {
-  .nav__sub-nav__item {
-    font-size: 1.4rem;
-  }
-}
-
-@media (min-width: 1100px) {
-  .nav__sub-nav__item {
-    font-size: 1.6rem;
-  }
-}
-
-@media (min-width: 1400px) {
   .nav__sub-nav__item {
     font-size: 1.8rem;
   }
 }
 
+@media (min-width: 1100px) {
+  .nav__sub-nav__item {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .nav__sub-nav__item {
+    font-size: 2.8rem;
+  }
+}
+
 .nav__sub-nav__item a {
-  padding: 0 1rem;
-  color: #6A6A6A;
+  font-size: 400;
+  padding: 0 0 0 2rem;
+  color: white;
   transition: color 0.5s;
 }
 
 .nav__sub-nav__item a:hover {
-  color: white;
+  color: #6A6A6A;
 }
 
 .home-intro {
