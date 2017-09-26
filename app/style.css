@@ -852,11 +852,11 @@ a img {
   flex: 0 1 auto;
   flex-wrap: wrap;
   max-width: 140rem;
-  margin-left: -6rem;
+  margin-left: -4.1%;
 }
 
 .featured-project {
-  padding-left: 6rem;
+  padding-left: 4.1%;
   margin-bottom: 2.4rem;
 }
 
@@ -1220,11 +1220,11 @@ a img {
   flex: 0 1 auto;
   flex-wrap: wrap;
   max-width: 140rem;
-  margin-left: -6rem;
+  margin-left: -4.2%;
 }
 
 .detail-img {
-  padding-left: 6rem;
+  padding-left: 4.2%;
   margin-bottom: 2.4rem;
 }
 
